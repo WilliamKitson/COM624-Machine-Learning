@@ -7,8 +7,8 @@ df.head()
 # View basic structure
 df.info()
 
-# Check for missing values
-df.isnull().sum()
+# Cleaning: drop columns with missing values
+df = df.dropna()
 
 # Cleaning data: drop columns not useful for analysis
 df.drop(['receiver', 'date'], axis=1, inplace=True)
