@@ -18,6 +18,9 @@ df['sender'] = np.where(
 # Cleaning: anonymise senders by extracting domain from address
 df['sender'] = df['sender'].str.split('@').str[1]
 
+# Cleaning: replace null subjects with empty string
+df['subject'] = df['subject'].fillna('')
+
 # Cleaning: drop columns with missing values
 df = df.dropna()
 
