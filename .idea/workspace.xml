@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="phishing_data_by_type.csv cleaned">
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="data_cleaning.py renamed">
+      <change afterPath="$PROJECT_DIR$/feature engineering and EDA.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cleaned_training_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cleaned_training_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_cleaning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data collection and preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data collection and preprocessing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.data collection and preprocessing.executor&quot;: &quot;Run&quot;,
     &quot;Python.data_cleaning.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -94,7 +96,9 @@
       <workItem from="1759344349989" duration="37000" />
       <workItem from="1759742486926" duration="4000" />
       <workItem from="1759748705236" duration="11000" />
-      <workItem from="1759750853001" duration="325000" />
+      <workItem from="1759750853001" duration="1337000" />
+      <workItem from="1759753562860" duration="85000" />
+      <workItem from="1759836604653" duration="1658000" />
     </task>
     <task id="LOCAL-00001" summary="phishing_data_by_type.csv cleaned">
       <option name="closed" value="true" />
@@ -112,7 +116,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759251188345</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="phishing_data_by_type.csv cleaned">
+      <option name="closed" value="true" />
+      <created>1759751192284</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759751192284</updated>
+    </task>
+    <task id="LOCAL-00004" summary="data_cleaning.py renamed">
+      <option name="closed" value="true" />
+      <created>1759751395372</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759751395372</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,9 +140,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="phishing_data_by_type.csv cleaned" />
-    <option name="LAST_COMMIT_MESSAGE" value="phishing_data_by_type.csv cleaned" />
+    <MESSAGE value="data_cleaning.py renamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="data_cleaning.py renamed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_cleaning.coverage" NAME="data_cleaning Coverage Results" MODIFIED="1759751173475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1759838260717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
