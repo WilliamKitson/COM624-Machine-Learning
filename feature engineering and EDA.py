@@ -2,9 +2,14 @@ import pandas as pd
 
 # Load phishing data to dataframe
 df = pd.read_csv("cleaned_training_data.csv")
+print(df.shape)
 
 # EDA: subject length
-print(df["body"].str.len())
+df['body_length'] = df["body"].str.len()
 
 # EDA: how many links does the body contain
-print(df['body'].str.count('http'))
+df['link_count'] = df['body'].str.count('http')
+
+# Save EDA prepped data set
+df.to_csv('cleaned_training_data_EDA.csv', index=False)
+print(df.shape)
