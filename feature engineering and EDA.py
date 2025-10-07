@@ -17,7 +17,7 @@ print(df.describe(include='all'))
 common = df['sender'].value_counts().nlargest(10).index
 df['Category_top'] = df['sender'].apply(lambda x: x if x in common else 'other')
 
-# Bar chart to show phishing vs non-phishing
+# Bar chart to show most common domains
 missing_counts = df['Category_top'].value_counts()
 missing_counts = missing_counts[missing_counts.index != 'other']
 missing_counts.plot(kind='bar', color='orange')
