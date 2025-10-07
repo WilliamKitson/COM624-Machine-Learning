@@ -3,7 +3,7 @@ import pandas as pd
 
 # Load phishing data to dataframe
 df = pd.read_csv("CEAS_08.csv")
-print(df.shape)
+print(df.shape, df.head())
 
 # Cleaning data: drop columns not useful for analysis
 df.drop(['receiver', 'date', 'urls'], axis=1, inplace=True)
@@ -26,4 +26,4 @@ df = df.dropna()
 
 # Save cleaned data set
 df.to_csv('cleaned_training_data.csv', index=False)
-print(df.shape)
+print(df.shape, df.head())
