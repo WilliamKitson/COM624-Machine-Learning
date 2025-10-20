@@ -9,7 +9,7 @@ print(df.shape, df.head())
 
 # Visualise columns with missing data before cleaning
 plt.figure(figsize=(10, 5))
-sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values, palette='Reds_r')
+sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values)
 plt.title("missing data before cleaning")
 plt.xlabel('column')
 plt.ylabel("missing")
@@ -43,7 +43,7 @@ df = df.dropna()
 
 # Visualise columns with missing data after cleaning
 plt.figure(figsize=(10, 5))
-sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values, palette='Reds_r')
+sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values)
 plt.title("missing data after cleaning")
 plt.xlabel('column')
 plt.ylabel("Count of Missing Entries")
