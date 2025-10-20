@@ -11,7 +11,7 @@ cleaned_dir = 'datasets'
 os.makedirs(cleaned_dir, exist_ok=True)
 
 # Load phishing data to dataframe
-df = pd.read_csv("datasets/CEAS_08.csv")
+df = pd.read_csv(os.path.join(cleaned_dir, "CEAS_08.csv"))
 print(df.shape, df.head())
 
 # Visualise columns with missing data before cleaning
