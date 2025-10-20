@@ -1,9 +1,14 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # dataset: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset
+
+# Ensure that cleaned directory exists
+cleaned_dir = 'datasets'
+os.makedirs(cleaned_dir, exist_ok=True)
 
 # Load phishing data to dataframe
 df = pd.read_csv("datasets/CEAS_08.csv")
@@ -54,5 +59,5 @@ plt.tight_layout()
 plt.show()
 
 # Save cleaned data set
-df.to_csv('datasets/cleaned_training_data.csv', index=False)
+df.to_csv(os.path.join(cleaned_dir, 'cleaned_training_data.csv'), index=False)
 print(df.shape, df.head())
