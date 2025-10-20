@@ -6,7 +6,7 @@ import seaborn as sns
 # dataset: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset
 
 # Load phishing data to dataframe
-df = pd.read_csv("CEAS_08.csv")
+df = pd.read_csv("datasets/CEAS_08.csv")
 print(df.shape, df.head())
 
 # Visualise columns with missing data before cleaning
@@ -54,5 +54,5 @@ plt.tight_layout()
 plt.show()
 
 # Save cleaned data set
-df.to_csv('cleaned_training_data.csv', index=False)
+df.to_csv('datasets/cleaned_training_data.csv', index=False)
 print(df.shape, df.head())
