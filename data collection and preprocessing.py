@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# dataset: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset
+
 # Load phishing data to dataframe
 df = pd.read_csv("CEAS_08.csv")
 print(df.shape, df.head())
