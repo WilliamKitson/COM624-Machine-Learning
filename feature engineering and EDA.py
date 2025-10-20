@@ -1,5 +1,4 @@
 import pandas as pd
-from matplotlib import pyplot as plt
 
 # Load phishing data to dataframe
 df = pd.read_csv("cleaned_training_data.csv")
