@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="data collection and preprocessing redefined">
-      <change beforePath="$PROJECT_DIR$/feature engineering and EDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature engineering and EDA.py" afterDir="false" />
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="2. feature engineering and EDA.py redefined">
+      <change afterPath="$PROJECT_DIR$/4. Machine Learning Models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.1. data collection and preprocessing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.4. Machine Learning Models.executor&quot;: &quot;Run&quot;,
     &quot;Python.data collection and preprocessing.executor&quot;: &quot;Run&quot;,
     &quot;Python.data_cleaning.executor&quot;: &quot;Run&quot;,
     &quot;Python.feature engineering and EDA.executor&quot;: &quot;Run&quot;,
@@ -113,6 +116,10 @@
       <workItem from="1760625079683" duration="1056000" />
       <workItem from="1760956174782" duration="2781000" />
       <workItem from="1760967913253" duration="3817000" />
+      <workItem from="1760976862833" duration="57000" />
+      <workItem from="1760976992523" duration="351000" />
+      <workItem from="1761062911621" duration="472000" />
+      <workItem from="1761063627086" duration="423000" />
     </task>
     <task id="LOCAL-00001" summary="phishing_data_by_type.csv cleaned">
       <option name="closed" value="true" />
@@ -282,7 +289,31 @@
       <option name="project" value="LOCAL" />
       <updated>1760976177524</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feature engineering and EDA.py redefined">
+      <option name="closed" value="true" />
+      <created>1760976272205</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1760976272205</updated>
+    </task>
+    <task id="LOCAL-00023" summary="1. data collection and preprocessing redefined">
+      <option name="closed" value="true" />
+      <created>1760976309350</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1760976309350</updated>
+    </task>
+    <task id="LOCAL-00024" summary="2. feature engineering and EDA.py redefined">
+      <option name="closed" value="true" />
+      <created>1760976344526</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1760976344526</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,14 +322,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="phishing_data_by_type.csv cleaned" />
     <MESSAGE value="data_cleaning.py renamed" />
-    <MESSAGE value="feature engineering and EDA.py redefined" />
     <MESSAGE value="datasets dir defined" />
     <MESSAGE value="data collection and preprocessing redefined" />
-    <option name="LAST_COMMIT_MESSAGE" value="data collection and preprocessing redefined" />
+    <MESSAGE value="feature engineering and EDA.py redefined" />
+    <MESSAGE value="1. data collection and preprocessing redefined" />
+    <MESSAGE value="2. feature engineering and EDA.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="2. feature engineering and EDA.py redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_cleaning.coverage" NAME="data_cleaning Coverage Results" MODIFIED="1759751173475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering_and_EDA.coverage" NAME="feature engineering and EDA Coverage Results" MODIFIED="1760975974958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761064023370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering_and_EDA.coverage" NAME="feature engineering and EDA Coverage Results" MODIFIED="1760976242569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1760976131310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$1__data_collection_and_preprocessing.coverage" NAME="1. data collection and preprocessing Coverage Results" MODIFIED="1760976289456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
