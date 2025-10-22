@@ -13,6 +13,7 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
+from xgboost import XGBClassifier
 
 # Ensure that cleaned directory exists
 cleaned_dir = 'datasets'
@@ -57,7 +58,7 @@ models = {
 'Random Forest': RandomForestClassifier(),
 'Logistic Regression': LogisticRegression(),
 'Naive Bayes': GaussianNB(),
-#'XGBoost': XGBClassifier()
+'XGBoost': XGBClassifier()
 }
 results = {}
 predictions = {}
