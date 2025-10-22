@@ -4,12 +4,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, \
-    classification_report
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import LabelEncoder
 
 # Ensure that cleaned directory exists
 cleaned_dir = 'datasets'
@@ -18,15 +21,8 @@ os.makedirs(cleaned_dir, exist_ok=True)
 # Load phishing data to dataframe
 df = pd.read_csv(os.path.join(cleaned_dir, "experimental_data_analysis.csv"))
 
-# Encode strings into standard scalar compatible values
-le = LabelEncoder()
-df['sender_encoded'] = le.fit_transform(df['sender'])
-df['timestamp_encoded'] = le.fit_transform(df['timestamp'])
-df['subject_encoded'] = le.fit_transform(df['subject'])
-df['body_encoded'] = le.fit_transform(df['body'])
-
 # Split dataset into features (x) and target variables (y)
-x = df[['sender_encoded', 'timestamp_encoded', 'subject_encoded', 'body_encoded', 'body_length', 'link_count']]
+x = df[['body_length', 'link_count']]
 y = df['label']
 
 # Define 80% training and 20% test data
