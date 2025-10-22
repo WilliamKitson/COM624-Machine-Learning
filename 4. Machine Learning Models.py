@@ -72,3 +72,8 @@ for name, model in models.items():
     metrics = evaluate_model(y_test, y_pred) # Compute metrics
     results[name] = metrics
     plot_metrics(name, metrics) # Plot metrics
+    import pickle
+
+    # Save model
+    with open(name + '.pkl', 'wb') as f:
+        pickle.dump(model, f)
