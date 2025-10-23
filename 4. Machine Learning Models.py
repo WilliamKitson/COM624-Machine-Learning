@@ -15,6 +15,27 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
+def evaluate_model(y_true_in, y_pred_in):
+    y_true_oh = pd.get_dummies(y_true_in)
+    y_pred_oh = pd.get_dummies(y_pred_in)
+    return {
+        'Accuracy': accuracy_score(y_true_in, y_pred_in),
+        'Precision': precision_score(y_true_in, y_pred_in, average='weighted', zero_division=0),
+        'Recall': recall_score(y_true_in, y_pred_in, average='weighted', zero_division=0),
+        'F1 Score': f1_score(y_true_in, y_pred_in, average='weighted', zero_division=0),
+        'ROC-AUC': roc_auc_score(y_true_oh, y_pred_oh, multi_class='ovr')
+    }
+
+def plot_metrics(name_in, metrics_in):
+    plt.figure(figsize=(6, 4))
+    sns.barplot(x=list(metrics_in.keys()), y=list(metrics_in.values()))
+    plt.title(f"{name_in} Performance Metrics")
+    plt.ylabel("Score")
+    plt.ylim(0, 1)
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
 # Ensure that cleaned directory exists
 cleaned_dir = 'datasets'
 os.makedirs(cleaned_dir, exist_ok=True)
@@ -31,27 +52,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 scaler = StandardScaler()
 x_train_scaled = scaler.fit_transform(x_train)
 x_test_scaled = scaler.transform(x_test)
-
-def evaluate_model(y_true, y_pred):
-    y_true_oh = pd.get_dummies(y_true)
-    y_pred_oh = pd.get_dummies(y_pred)
-    return {
-        'Accuracy': accuracy_score(y_true, y_pred),
-        'Precision': precision_score(y_true, y_pred, average='weighted', zero_division=0),
-        'Recall': recall_score(y_true, y_pred, average='weighted', zero_division=0),
-        'F1 Score': f1_score(y_true, y_pred, average='weighted', zero_division=0),
-        'ROC-AUC': roc_auc_score(y_true_oh, y_pred_oh, multi_class='ovr')
-    }
-
-def plot_metrics(name, metrics):
-    plt.figure(figsize=(6, 4))
-    sns.barplot(x=list(metrics.keys()), y=list(metrics.values()))
-    plt.title(f"{name} Performance Metrics")
-    plt.ylabel("Score")
-    plt.ylim(0, 1)
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
 
 #
 models = {
