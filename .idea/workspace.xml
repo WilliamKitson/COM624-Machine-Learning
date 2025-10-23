@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="4. Machine Learning Models.py redefined">
+      <change afterPath="$PROJECT_DIR$/deep learning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4. Machine Learning Models.py" beforeDir="false" afterPath="$PROJECT_DIR$/4. Machine Learning Models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +352,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_cleaning.coverage" NAME="data_cleaning Coverage Results" MODIFIED="1759751173475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761165251797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761229901658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering_and_EDA.coverage" NAME="feature engineering and EDA Coverage Results" MODIFIED="1760976242569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1760976131310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$LSTM_model.coverage" NAME="LSTM model Coverage Results" MODIFIED="1761163302406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
