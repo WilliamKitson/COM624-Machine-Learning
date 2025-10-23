@@ -1,40 +1,13 @@
 import os
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import utils
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import f1_score
-from sklearn.metrics import roc_auc_score
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
-
-def evaluate_model(y_true_in, y_pred_in):
-    y_true_oh = pd.get_dummies(y_true_in)
-    y_pred_oh = pd.get_dummies(y_pred_in)
-    return {
-        'Accuracy': accuracy_score(y_true_in, y_pred_in),
-        'Precision': precision_score(y_true_in, y_pred_in, average='weighted', zero_division=0),
-        'Recall': recall_score(y_true_in, y_pred_in, average='weighted', zero_division=0),
-        'F1 Score': f1_score(y_true_in, y_pred_in, average='weighted', zero_division=0),
-        'ROC-AUC': roc_auc_score(y_true_oh, y_pred_oh, multi_class='ovr')
-    }
-
-def plot_metrics(name_in, metrics_in):
-    plt.figure(figsize=(6, 4))
-    sns.barplot(x=list(metrics_in.keys()), y=list(metrics_in.values()))
-    plt.title(f"{name_in} Performance Metrics")
-    plt.ylabel("Score")
-    plt.ylim(0, 1)
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.show()
 
 # Ensure that cleaned directory exists
 cleaned_dir = 'datasets'
@@ -70,9 +43,9 @@ for name, model in models.items():
     predictions[name] = y_pred
     print(f"\n{name} Classification Report:\n")
     print(classification_report(y_test, y_pred, zero_division=0)) # Print detailed report
-    metrics = evaluate_model(y_test, y_pred) # Compute metrics
+    metrics = utils.evaluate_model(y_test, y_pred) # Compute metrics
     results[name] = metrics
-    plot_metrics(name, metrics) # Plot metrics
+    utils.plot_metrics(name, metrics) # Plot metrics
     import pickle
 
     # Save model

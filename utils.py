@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -28,14 +27,3 @@ def plot_metrics(name_in, metrics_in):
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
-
-# Ensure that cleaned directory exists
-cleaned_dir = 'datasets'
-os.makedirs(cleaned_dir, exist_ok=True)
-
-# Load phishing data to dataframe
-df = pd.read_csv(os.path.join(cleaned_dir, "cleaned_training_data.csv"))
-
-# Split dataset into features (x) and target variables (y)
-x = df[['sender', 'timestamp', 'subject', 'body']]
-y = df['label']
