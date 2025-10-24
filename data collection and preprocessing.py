@@ -37,11 +37,6 @@ df['sender'] = np.where(
 # Cleaning: anonymise senders by extracting domain from address
 df['sender'] = df['sender'].str.split('@').str[1]
 
-# Cleaning: extract timestamp from date
-df['date'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
-df['date'] = df['date'].dt.time
-df = df.rename(columns={'date': 'timestamp'})
-
 # Cleaning: replace null subjects with empty string
 df['subject'] = df['subject'].fillna('')
 

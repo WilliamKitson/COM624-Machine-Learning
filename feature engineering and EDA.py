@@ -10,14 +10,19 @@ os.makedirs(cleaned_dir, exist_ok=True)
 # Load phishing data to dataframe
 df = pd.read_csv(os.path.join(cleaned_dir, "cleaned_training_data.csv"))
 
-# EDA: subject length
+# Feature engineering: subject length
 df['subject_length'] = df["subject"].str.len()
 
-# EDA: body length
+# Feature engineering: body length
 df['body_length'] = df["body"].str.len()
 
-# EDA: how many links does the body contain
+# Feature engineering: how many links does the body contain
 df['link_count'] = df['body'].str.count('http')
+
+#Feature engineering: extract and round hour from date
+df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
+df['hour'] = df['hour'].dt.round('h')
+df['hour'] = df['hour'].dt.hour
 
 # EDA: bar chart most common domains for phishing and safe emails
 email_types = {
