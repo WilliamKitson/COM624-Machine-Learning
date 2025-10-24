@@ -10,6 +10,9 @@ os.makedirs(cleaned_dir, exist_ok=True)
 # Load phishing data to dataframe
 df = pd.read_csv(os.path.join(cleaned_dir, "cleaned_training_data.csv"))
 
+# EDA: subject length
+df['subject_length'] = df["subject"].str.len()
+
 # EDA: body length
 df['body_length'] = df["body"].str.len()
 
@@ -34,6 +37,6 @@ for name, email_type in email_types.items():
 
 # EDA:
 
-# Save EDA data set for use in Tableau
+# Save EDA data set
 df.to_csv(os.path.join(cleaned_dir, 'experimental_data_analysis.csv'), index=False)
 print(df.shape, df.head())
