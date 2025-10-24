@@ -54,6 +54,16 @@ for name, column in columns.items():
     plt.ylabel(name)
     plt.show()
 
+# EDA: barchart safe and phishing emails by hour
+for name, email_type in email_types.items():
+    hours_df = email_type['hour'].value_counts().sort_index()
+    plt.plot(hours_df.index, hours_df.values, marker='o')
+    plt.title(name + ' emails by hour')
+    plt.xlabel('hour')
+    plt.ylabel('emails')
+    plt.tight_layout()
+    plt.show()
+
 # Save EDA data set
 df.to_csv(os.path.join(cleaned_dir, 'experimental_data_analysis.csv'), index=False)
 print(df.shape, df.head())
