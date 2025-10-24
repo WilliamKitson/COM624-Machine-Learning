@@ -54,7 +54,7 @@ for name, column in columns.items():
     plt.ylabel(name)
     plt.show()
 
-# EDA: barchart safe and phishing emails by hour
+# EDA: line graph safe and phishing emails by hour
 for name, email_type in email_types.items():
     hours_df = email_type['hour'].value_counts().sort_index()
     plt.plot(hours_df.index, hours_df.values, marker='o')
