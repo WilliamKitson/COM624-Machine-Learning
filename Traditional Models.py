@@ -16,6 +16,10 @@ os.makedirs(cleaned_dir, exist_ok=True)
 # Load phishing data to dataframe
 df = pd.read_csv(os.path.join(cleaned_dir, "experimental_data_analysis.csv"))
 
+# Ensure that models directory exists
+models_dir = 'models'
+os.makedirs(models_dir, exist_ok=True)
+
 # Split dataset into features (x) and target variables (y)
 x = df[['body_length', 'link_count']]
 y = df['label']
@@ -49,5 +53,5 @@ for name, model in models.items():
     import pickle
 
     # Save model
-    with open(name + '.pkl', 'wb') as f:
+    with open(os.path.join(models_dir, name + '.pkl'), 'wb') as f:
         pickle.dump(model, f)
