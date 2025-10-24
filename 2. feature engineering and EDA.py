@@ -17,15 +17,20 @@ df['body_length'] = df["body"].str.len()
 df['link_count'] = df['body'].str.count('http')
 
 # EDA: most common domains for phishing emails
-phishing_df = df[df['label'] == 1]
-top_domains_df = phishing_df['sender'].value_counts().head(10)
-plt.figure(figsize=(10, 6))
-sns.barplot(x=top_domains_df.values, y=top_domains_df.index, orient='h')
-plt.title('most common domains for phishing emails')
-plt.xlabel('phishing count')
-plt.ylabel('domain')
-plt.tight_layout()
-plt.show()
+dfs = {
+    'phishing' : df[df['label'] == 1],
+    'safe': df[df['label'] == 0]
+}
+
+for name, model in dfs.items():
+    top_domains_df = model['sender'].value_counts().head(10)
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=top_domains_df.values, y=top_domains_df.index, orient='h')
+    plt.title('most common domains for ' + name + ' emails')
+    plt.xlabel('phishing count')
+    plt.ylabel('domain')
+    plt.tight_layout()
+    plt.show()
 
 # EDA:
 
