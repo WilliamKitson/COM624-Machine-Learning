@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="feature engineering and EDA.py redefined" />
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="feature engineering and EDA.py redefined">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature engineering and EDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature engineering and EDA.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +134,7 @@
       <workItem from="1761298942568" duration="807000" />
       <workItem from="1761303389042" duration="2632000" />
       <workItem from="1761306597605" duration="2067000" />
-      <workItem from="1761322821353" duration="1561000" />
+      <workItem from="1761322821353" duration="2664000" />
     </task>
     <task id="LOCAL-00001" summary="phishing_data_by_type.csv cleaned">
       <option name="closed" value="true" />
@@ -405,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761324277099</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="feature engineering and EDA.py redefined">
+      <option name="closed" value="true" />
+      <created>1761324589165</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1761324589165</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

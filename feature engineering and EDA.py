@@ -50,7 +50,7 @@ for name, column in columns.items():
     df.boxplot(column=column, by='label')
     plt.title(f'{name} by label')
     plt.suptitle('')
-    plt.xlabel('Label (0=Safe, 1=Phishing)')
+    plt.xlabel('Label (0=safe, 1=phishing)')
     plt.ylabel(name)
     plt.show()
 
@@ -64,6 +64,6 @@ for name, email_type in email_types.items():
     plt.tight_layout()
     plt.show()
 
-# Save EDA data set
+# Save EDA dataset
 df.to_csv(os.path.join(cleaned_dir, 'experimental_data_analysis.csv'), index=False)
 print(df.shape, df.head())
