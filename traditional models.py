@@ -27,9 +27,14 @@ models = {
     'XGBoost': XGBClassifier()
 }
 
+model_performances = {
+}
+
 for name, model in models.items():
     model.fit(x_train_scaled, y_train)
     y_pred = model.predict(x_test_scaled)
     utils.save_model(name, model)
     utils.visualise_model(name, y_test, y_pred)
-    print(utils.model_performance(y_test, y_pred))
+    model_performances[name] = utils.model_performance(y_test, y_pred)
+
+print(model_performances)

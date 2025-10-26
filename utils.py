@@ -64,4 +64,4 @@ def model_performance(y_true_in, y_pred_in):
         roc_auc_score(y_true_in, y_pred_in, multi_class='ovr')
     }
 
-    return sum(metrics_results) / len(metrics_results)
+    return float(sum(metrics_results) / len(metrics_results))
