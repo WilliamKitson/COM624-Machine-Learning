@@ -21,10 +21,10 @@ df['hour'] = df['hour'].dt.hour
 # Feature engineering: volume of misspelled words
 spellchecker = SpellChecker()
 
-def count_misspellings(text):
-    return len(spellchecker.unknown(str(text).split()))
+def count_correct_spellings(text):
+    return len(spellchecker.known(str(text).split()))
 
-df['misspellings_count'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
+df['correct_spellings_count'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
 
 # Save dataset for exploratory data analysis
 utils.save_dataset(df, 'exploratory_data_analysis.csv')
