@@ -10,7 +10,7 @@ from xgboost import XGBClassifier
 df = utils.load_dataset('exploratory_data_analysis.csv')
 
 # Split dataset into features (x) and target variables (y)
-x = df[['body_length', 'link_count']]
+x = df[['body_length', 'link_count', 'link_count']]
 y = df['label']
 
 # Define 80% training and 20% test data
@@ -26,17 +26,19 @@ models = {
 'Naive Bayes': GaussianNB(),
 'XGBoost': XGBClassifier()
 }
-results = {}
-predictions = {}
+results = {
+}
+predictions = {
+}
 
 #
 for name, model in models.items():
-    model.fit(x_train_scaled, y_train) # Train model
-    y_pred = model.predict(x_test_scaled) # Predict on test set
+    model.fit(x_train_scaled, y_train)
+    y_pred = model.predict(x_test_scaled)
     predictions[name] = y_pred
     print(f"\n{name} Classification Report:\n")
-    print(classification_report(y_test, y_pred, zero_division=0)) # Print detailed report
-    metrics = utils.evaluate_model(y_test, y_pred) # Compute metrics
+    print(classification_report(y_test, y_pred, zero_division=0))
+    metrics = utils.evaluate_model(y_test, y_pred)
     results[name] = metrics
-    utils.plot_metrics(name, metrics) # Plot metrics
+    utils.plot_metrics(name, metrics)
     utils.save_model(name, model)
