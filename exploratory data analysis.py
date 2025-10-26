@@ -14,7 +14,7 @@ for name, email_type in email_types.items():
     top_domains_df = email_type['sender'].value_counts().head(10)
     sns.barplot(x=top_domains_df.values, y=top_domains_df.index, orient='h')
     plt.title('most common domains for ' + name + ' emails')
-    plt.xlabel('phishing count')
+    plt.xlabel(name + ' count')
     plt.ylabel('domain')
     plt.tight_layout()
     plt.show()
@@ -23,7 +23,8 @@ for name, email_type in email_types.items():
 columns = {
     'body length' : 'body_length',
     'subject length' : 'subject_length',
-    'link count' : 'link_count'
+    'link count' : 'link_count',
+    'misspellings count': 'misspellings_count'
 }
 
 for name, column in columns.items():
@@ -43,11 +44,3 @@ for name, email_type in email_types.items():
     plt.ylabel('emails')
     plt.tight_layout()
     plt.show()
-
-# EDA: boxplot misspellings by label
-df.boxplot(column='misspellings_count', by='label')
-plt.title(f'misspellings by label')
-plt.suptitle('')
-plt.xlabel('label (0=safe, 1=phishing)')
-plt.ylabel('misspellings')
-plt.show()
