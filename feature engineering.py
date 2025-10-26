@@ -2,36 +2,35 @@ import utils
 import pandas as pd
 from spellchecker import SpellChecker
 
+# load cleaned training dataset
 df = utils.load_dataset('cleaned_training_data.csv')
 
-# Feature engineering: subject length
+# create subject length feature
 df['subject_length'] = df["subject"].str.len()
 
-# Feature engineering: body length
+# create body length feature
 df['body_length'] = df["body"].str.len()
 
-# Feature engineering: how many links does the body contain
+# create link count feature
 df['link_count'] = df['body'].str.count('http')
 
-# Feature engineering: extract and round hour from date
+# create hour feature
 df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
 df['hour'] = df['hour'].dt.round('h')
 df['hour'] = df['hour'].dt.hour
 
-# Feature engineering: volume of misspelled words
+# create correct spelling scaled feature
 spellchecker = SpellChecker()
 
 def count_correct_spellings(text):
-    return len(spellchecker.known(str(text).split()))
+    return len(spellchecker.known(str(text).split())) / df['body_length'] + df['subject_length']
 
 df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
-
-# Scale correct spellings by body length
 df['correct_spellings_scaled'] = df['correct_spellings_scaled'] / df['body_length'] + df['subject_length']
 
-# drop columns with missing values
+# drop columns with missing values and visualise
 df = df.dropna()
 utils.visualise_missing_rows(df)
 
-# Save dataset for exploratory data analysis
+# save dataset for exploratory data analysis
 utils.save_dataset(df, 'exploratory_data_analysis.csv')
