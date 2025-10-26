@@ -19,15 +19,14 @@ scaler = StandardScaler()
 x_train_scaled = scaler.fit_transform(x_train)
 x_test_scaled = scaler.transform(x_test)
 
-#
+# loop through, train, and evaluate models
 models = {
-'Random Forest': RandomForestClassifier(),
-'Logistic Regression': LogisticRegression(),
-'Naive Bayes': GaussianNB(),
-'XGBoost': XGBClassifier()
+    'Random Forest': RandomForestClassifier(),
+    'Logistic Regression': LogisticRegression(),
+    'Naive Bayes': GaussianNB(),
+    'XGBoost': XGBClassifier()
 }
 
-#
 for name, model in models.items():
     model.fit(x_train_scaled, y_train)
     y_pred = model.predict(x_test_scaled)
