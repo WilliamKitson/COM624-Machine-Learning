@@ -1,13 +1,8 @@
-import os
+import utils
 import pandas as pd
 from spellchecker import SpellChecker
 
-# Ensure that cleaned directory exists
-cleaned_dir = 'datasets'
-os.makedirs(cleaned_dir, exist_ok=True)
-
-# Load phishing data to dataframe
-df = pd.read_csv(os.path.join(cleaned_dir, "cleaned_training_data.csv"))
+df = utils.load_dataset('cleaned_training_data.csv')
 
 # Feature engineering: subject length
 df['subject_length'] = df["subject"].str.len()
@@ -32,5 +27,4 @@ def count_misspellings(text):
 df['misspellings_count'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
 
 # Save dataset for exploratory data analysis
-df.to_csv(os.path.join(cleaned_dir, 'experimental_data_analysis.csv'), index=False)
-print(df.shape, df.head())
+utils.save_dataset(df, 'experimental_data_analysis.csv')

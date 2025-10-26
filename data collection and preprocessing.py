@@ -1,18 +1,9 @@
-import os
+import utils
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# dataset: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset
-
-# Ensure that cleaned directory exists
-cleaned_dir = 'datasets'
-os.makedirs(cleaned_dir, exist_ok=True)
-
-# Load phishing data to dataframe
-df = pd.read_csv(os.path.join(cleaned_dir, "CEAS_08.csv"))
-print(df.shape, df.head())
+df = utils.load_dataset('CEAS_08.csv')
 
 # Visualise columns with missing data before cleaning
 plt.figure(figsize=(10, 5))
@@ -54,5 +45,4 @@ plt.tight_layout()
 plt.show()
 
 # Save cleaned data set
-df.to_csv(os.path.join(cleaned_dir, 'cleaned_training_data.csv'), index=False)
-print(df.shape, df.head())
+utils.save_dataset(df, 'cleaned_training_data.csv')

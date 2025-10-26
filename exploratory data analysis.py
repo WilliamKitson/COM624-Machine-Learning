@@ -1,14 +1,8 @@
-import os
-import pandas as pd
+import utils
 from matplotlib import pyplot as plt
 import seaborn as sns
 
-# Ensure that cleaned directory exists
-cleaned_dir = 'datasets'
-os.makedirs(cleaned_dir, exist_ok=True)
-
-# Load phishing data to dataframe
-df = pd.read_csv(os.path.join(cleaned_dir, "cleaned_training_data.csv"))
+df = utils.load_dataset('experimental_data_analysis.csv')
 
 # EDA: bar chart most common domains for phishing and safe emails
 email_types = {

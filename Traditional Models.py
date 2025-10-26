@@ -1,5 +1,3 @@
-import os
-import pandas as pd
 import utils
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
@@ -9,16 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
-# Ensure that cleaned directory exists
-cleaned_dir = 'datasets'
-os.makedirs(cleaned_dir, exist_ok=True)
-
-# Load phishing data to dataframe
-df = pd.read_csv(os.path.join(cleaned_dir, "experimental_data_analysis.csv"))
-
-# Ensure that models directory exists
-models_dir = 'models'
-os.makedirs(models_dir, exist_ok=True)
+df = utils.load_dataset('experimental_data_analysis.csv')
 
 # Split dataset into features (x) and target variables (y)
 x = df[['body_length', 'link_count']]
@@ -50,8 +39,4 @@ for name, model in models.items():
     metrics = utils.evaluate_model(y_test, y_pred) # Compute metrics
     results[name] = metrics
     utils.plot_metrics(name, metrics) # Plot metrics
-    import pickle
-
-    # Save model
-    with open(os.path.join(models_dir, name + '.pkl'), 'wb') as f:
-        pickle.dump(model, f)
+    utils.save_model(name, model)
