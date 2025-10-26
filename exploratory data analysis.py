@@ -2,7 +2,7 @@ import utils
 from matplotlib import pyplot as plt
 import seaborn as sns
 
-df = utils.load_dataset('experimental_data_analysis.csv')
+df = utils.load_dataset('exploratory_data_analysis.csv')
 
 # EDA: bar chart most common domains for phishing and safe emails
 email_types = {

@@ -27,4 +27,4 @@ def count_misspellings(text):
 df['misspellings_count'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
 
 # Save dataset for exploratory data analysis
-utils.save_dataset(df, 'experimental_data_analysis.csv')
+utils.save_dataset(df, 'exploratory_data_analysis.csv')

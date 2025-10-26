@@ -1,5 +1,5 @@
 /datasets/cleaned_training_data.csv
-/datasets/experimental_data_analysis.csv
+/datasets/exploratory_data_analysis.csv
 /models/Logistic Regression.pkl
 /models/Naive Bayes.pkl
 /models/Random Forest.pkl
