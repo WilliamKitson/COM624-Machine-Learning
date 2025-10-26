@@ -73,6 +73,14 @@ for name, email_type in email_types.items():
     plt.tight_layout()
     plt.show()
 
+# EDA: boxplot misspellings by label
+df.boxplot(column='misspellings_count', by='label')
+plt.title(f'misspellings by label')
+plt.suptitle('')
+plt.xlabel('label (0=safe, 1=phishing)')
+plt.ylabel('misspellings')
+plt.show()
+
 # Save EDA dataset
 df.to_csv(os.path.join(cleaned_dir, 'experimental_data_analysis.csv'), index=False)
 print(df.shape, df.head())
