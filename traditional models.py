@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
-df = utils.load_dataset('experimental_data_analysis.csv')
+df = utils.load_dataset('exploratory_data_analysis.csv')
 
 # Split dataset into features (x) and target variables (y)
 x = df[['body_length', 'link_count']]
