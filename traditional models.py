@@ -10,7 +10,7 @@ from xgboost import XGBClassifier
 df = utils.load_dataset('exploratory_data_analysis.csv')
 
 # Split dataset into features (x) and target variables (y)
-x = df[['body_length', 'link_count', 'link_count']]
+x = df[['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]
 y = df['label']
 
 # Define 80% training and 20% test data

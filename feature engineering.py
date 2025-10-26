@@ -29,5 +29,7 @@ df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + 
 # Scale correct spellings by body length
 df['correct_spellings_scaled'] = df['correct_spellings_scaled'] / df['body_length'] + df['subject_length']
 
+utils.visualise_missing_rows(df)
+
 # Save dataset for exploratory data analysis
 utils.save_dataset(df, 'exploratory_data_analysis.csv')

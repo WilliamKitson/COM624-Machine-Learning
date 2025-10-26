@@ -24,6 +24,16 @@ def save_model(path, model):
     with open(os.path.join(models_dir, path + '.pkl'), 'wb') as f:
         pickle.dump(model, f)
 
+def visualise_missing_rows(df):
+    plt.figure(figsize=(10, 5))
+    sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values)
+    plt.title("missing data after cleaning")
+    plt.xlabel('column')
+    plt.ylabel("Count of Missing Entries")
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.show()
+
 def evaluate_model(y_true_in, y_pred_in):
     y_true_oh = pd.get_dummies(y_true_in)
     y_pred_oh = pd.get_dummies(y_pred_in)
