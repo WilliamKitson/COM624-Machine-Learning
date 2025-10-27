@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="traditional models.py redefined">
-      <change afterPath="$PROJECT_DIR$/privacy preserving techniques.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="privacy preserving techniques.py defined">
+      <change beforePath="$PROJECT_DIR$/privacy preserving techniques.py" beforeDir="false" afterPath="$PROJECT_DIR$/privacy preserving techniques.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,23 +145,7 @@
       <workItem from="1761494231200" duration="328000" />
       <workItem from="1761496383501" duration="3038000" />
       <workItem from="1761501366089" duration="52000" />
-      <workItem from="1761566221189" duration="2894000" />
-    </task>
-    <task id="LOCAL-00004" summary="data_cleaning.py renamed">
-      <option name="closed" value="true" />
-      <created>1759751395372</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1759751395372</updated>
-    </task>
-    <task id="LOCAL-00005" summary="data collection and preprocessing redefined">
-      <option name="closed" value="true" />
-      <created>1759838331095</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1759838331095</updated>
+      <workItem from="1761566221189" duration="3353000" />
     </task>
     <task id="LOCAL-00006" summary="data collection and preprocessing redefined">
       <option name="closed" value="true" />
@@ -541,7 +523,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761500955500</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="privacy preserving techniques.py defined">
+      <option name="closed" value="true" />
+      <created>1761569395915</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1761569395915</updated>
+    </task>
+    <task id="LOCAL-00054" summary="privacy preserving techniques.py defined">
+      <option name="closed" value="true" />
+      <created>1761569487282</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1761569487282</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +565,8 @@
     <MESSAGE value="feature engineering.py redefined" />
     <MESSAGE value="data collection and preprocessing redefined" />
     <MESSAGE value="traditional models.py redefined" />
-    <option name="LAST_COMMIT_MESSAGE" value="traditional models.py redefined" />
+    <MESSAGE value="privacy preserving techniques.py defined" />
+    <option name="LAST_COMMIT_MESSAGE" value="privacy preserving techniques.py defined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_cleaning.coverage" NAME="data_cleaning Coverage Results" MODIFIED="1759751173475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -583,7 +582,7 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$exploratory_data_analysis.coverage" NAME="exploratory data analysis Coverage Results" MODIFIED="1761497590480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4_2__LSTM.coverage" NAME="4.2. LSTM Coverage Results" MODIFIED="1761236701211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$LSTM_model.coverage" NAME="LSTM model Coverage Results" MODIFIED="1761163302406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$privacy_preserving_techniques.coverage" NAME="privacy preserving techniques Coverage Results" MODIFIED="1761569349197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$privacy_preserving_techniques.coverage" NAME="privacy preserving techniques Coverage Results" MODIFIED="1761569440919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$utils.coverage" NAME="utils Coverage Results" MODIFIED="1761500356922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$deep_learning.coverage" NAME="deep learning Coverage Results" MODIFIED="1761230226345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
