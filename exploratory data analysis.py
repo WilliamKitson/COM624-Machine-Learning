@@ -2,7 +2,7 @@ import utils
 from matplotlib import pyplot as plt
 import seaborn as sns
 
-df = utils.load_dataset('exploratory_data_analysis.csv')
+df = utils.load_dataset('feature_engineered_dataset.csv')
 
 # EDA: bar chart most common domains for phishing and safe emails
 email_types = {
@@ -11,7 +11,7 @@ email_types = {
 }
 
 for name, email_type in email_types.items():
-    top_domains_df = email_type['sender'].value_counts().head(10)
+    top_domains_df = email_type['sender_domain'].value_counts().head(10)
     sns.barplot(x=top_domains_df.values, y=top_domains_df.index, orient='h')
     plt.title('most common domains for ' + name + ' emails')
     plt.xlabel(name + ' count')

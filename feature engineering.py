@@ -46,6 +46,9 @@ def count_correct_spellings(text):
 
 df_feature_engineered['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df_feature_engineered['body_length'] + df_feature_engineered['subject_length'])
 
+# add label to feature engineered dataset
+df_feature_engineered['label'] = df['label']
+
 # drop columns with missing values and visualise
 utils.visualise_missing_rows(df)
 
