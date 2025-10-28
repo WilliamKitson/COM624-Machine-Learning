@@ -19,7 +19,5 @@ for column in text_columns:
     # anonymise numbers within subject and body
     df[f'{column}_anonymised'] = df[column].astype(str).apply(lambda x: re.sub(r'\d+', '[NUMBER]', x))
 
-    # anonymise dates within subject and body
-
 # save dataset for exploratory data analysis
 utils.save_dataset(df, 'privacy_preserved.csv')

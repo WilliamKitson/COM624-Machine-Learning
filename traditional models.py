@@ -37,4 +37,4 @@ for name, model in models.items():
     utils.visualise_model(name, y_test, y_pred)
     model_performances[name] = utils.model_performance(y_test, y_pred)
 
-print(model_performances)
+utils.visualise_model_performance(model_performances)
