@@ -49,10 +49,12 @@ def visualise_model(name, y_true_in, y_pred_in):
 
     plt.figure(figsize=(6, 4))
     sns.barplot(x=list(evaluation.keys()), y=list(evaluation.values()))
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.title(f'{name} Performance Metrics')
     plt.ylabel("Score")
     plt.ylim(0, 1)
     plt.xticks(rotation=45)
+    plt.yticks(np.arange(0, 1.1, 0.1))
     plt.tight_layout()
     plt.show()
 
