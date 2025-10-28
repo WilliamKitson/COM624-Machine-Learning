@@ -39,9 +39,6 @@ unique_dataset_words = pd.concat([df['subject'], df['body']]).dropna().str.split
 correctly_spelled_words = set(spell_checker.known(unique_dataset_words))
 
 def count_correct_spellings(text):
-    if pd.isna(text):
-        return 0
-
     return sum(word in correctly_spelled_words for word in str(text).split())
 
 df_feature_engineered['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df_feature_engineered['body_length'] + df_feature_engineered['subject_length'])
