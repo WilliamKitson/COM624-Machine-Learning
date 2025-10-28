@@ -28,9 +28,10 @@ def save_model(path, model):
 def visualise_missing_rows(df):
     plt.figure(figsize=(10, 5))
     sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values)
-    plt.title("missing data after cleaning")
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.title("missing data")
     plt.xlabel('column')
-    plt.ylabel("Count of Missing Entries")
+    plt.ylabel("missing entries count")
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
