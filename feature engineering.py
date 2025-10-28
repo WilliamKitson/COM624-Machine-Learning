@@ -1,9 +1,20 @@
 import utils
 import pandas as pd
 from spellchecker import SpellChecker
+import numpy as np
 
 # load cleaned training dataset
 df = utils.load_dataset('cleaned_training_data.csv')
+
+# extract email domain from sender and receiver
+for column in ['sender', 'receiver']:
+    df[f'{column}_domain'] = np.where(
+        df[column].str.contains(r'<.*>'),
+        df[column].str.extract(r'<([^>]+)>')[0],
+        df[column]
+    )
+
+    df[f'{column}_domain'] = df[f'{column}_domain'].str.split('@').str[1]
 
 # create subject length feature
 df['subject_length'] = df["subject"].str.len()
