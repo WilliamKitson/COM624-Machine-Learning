@@ -1,7 +1,7 @@
 import utils
 import pandas as pd
-from spellchecker import SpellChecker
 import numpy as np
+from spellchecker import SpellChecker
 
 # load cleaned training dataset
 df = utils.load_dataset('cleaned_training_data.csv')
@@ -31,13 +31,18 @@ df['hour'] = df['hour'].dt.round('h')
 df['hour'] = df['hour'].dt.hour
 
 # create correct spelling scaled feature
-spellchecker = SpellChecker()
+spell_checker = SpellChecker()
+
+unique_dataset_words = pd.concat([df['subject'], df['body']]).dropna().str.split().explode().unique()
+correctly_spelled_words = set(spell_checker.known(unique_dataset_words))
 
 def count_correct_spellings(text):
-    return len(spellchecker.known(str(text).split())) / df['body_length'] + df['subject_length']
+    if pd.isna(text):
+        return 0
 
-df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
-df['correct_spellings_scaled'] = df['correct_spellings_scaled'] / df['body_length'] + df['subject_length']
+    return sum(word in correctly_spelled_words for word in str(text).split())
+
+df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df['body_length'] + df['subject_length'])
 
 # drop columns with missing values and visualise
 df = df.dropna()
