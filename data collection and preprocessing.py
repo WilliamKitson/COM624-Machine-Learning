@@ -15,4 +15,4 @@ df = df.dropna()
 utils.visualise_missing_rows(df)
 
 # Save cleaned data set
-utils.save_dataset(df, 'cleaned_training_data.csv')
+utils.save_dataset(df, 'preprocessed_dataset.csv')

@@ -4,31 +4,33 @@ import numpy as np
 from spellchecker import SpellChecker
 
 # load cleaned training dataset
-df = utils.load_dataset('cleaned_training_data.csv')
+df = utils.load_dataset('preprocessed_dataset.csv')
 
 # extract email domain from sender and receiver
+df_feature_engineered = pd.DataFrame()
+
 for column in ['sender', 'receiver']:
-    df[f'{column}_domain'] = np.where(
+    df_feature_engineered[f'{column}_domain'] = np.where(
         df[column].str.contains(r'<.*>'),
         df[column].str.extract(r'<([^>]+)>')[0],
         df[column]
     )
 
-    df[f'{column}_domain'] = df[f'{column}_domain'].str.split('@').str[1]
+    df_feature_engineered[f'{column}_domain'] = df_feature_engineered[f'{column}_domain'].str.split('@').str[1]
 
 # create subject length feature
-df['subject_length'] = df["subject"].str.len()
+df_feature_engineered['subject_length'] = df["subject"].str.len()
 
 # create body length feature
-df['body_length'] = df["body"].str.len()
+df_feature_engineered['body_length'] = df["body"].str.len()
 
 # create link count feature
-df['link_count'] = df['body'].str.count('http')
+df_feature_engineered['link_count'] = df['body'].str.count('http')
 
 # create hour feature
-df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
-df['hour'] = df['hour'].dt.round('h')
-df['hour'] = df['hour'].dt.hour
+df_feature_engineered['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
+df_feature_engineered['hour'] = df_feature_engineered['hour'].dt.round('h')
+df_feature_engineered['hour'] = df_feature_engineered['hour'].dt.hour
 
 # create correct spelling scaled feature
 spell_checker = SpellChecker()
@@ -42,11 +44,10 @@ def count_correct_spellings(text):
 
     return sum(word in correctly_spelled_words for word in str(text).split())
 
-df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df['body_length'] + df['subject_length'])
+df_feature_engineered['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df_feature_engineered['body_length'] + df_feature_engineered['subject_length'])
 
 # drop columns with missing values and visualise
-df = df.dropna()
 utils.visualise_missing_rows(df)
 
 # save dataset for exploratory data analysis
-utils.save_dataset(df, 'exploratory_data_analysis.csv')
+utils.save_dataset(df_feature_engineered, 'feature_engineered_dataset.csv')
