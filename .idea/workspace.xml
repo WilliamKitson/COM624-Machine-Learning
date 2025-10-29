@@ -153,15 +153,8 @@
       <workItem from="1761661238008" duration="572000" />
       <workItem from="1761662247849" duration="2854000" />
       <workItem from="1761667776854" duration="1989000" />
-      <workItem from="1761673318931" duration="354000" />
-    </task>
-    <task id="LOCAL-00014" summary="feature engineering and EDA.py redefined">
-      <option name="closed" value="true" />
-      <created>1759856322989</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1759856322989</updated>
+      <workItem from="1761673318931" duration="369000" />
+      <workItem from="1761742004624" duration="1546000" />
     </task>
     <task id="LOCAL-00015" summary="data collection and preprocessing redefined">
       <option name="closed" value="true" />
@@ -547,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761671763044</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="feature engineering.py redefined">
+      <option name="closed" value="true" />
+      <created>1761673676527</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1761673676527</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +582,7 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$Traditional_Models.coverage" NAME="Traditional Models Coverage Results" MODIFIED="1761493162176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761229901658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering_and_EDA.coverage" NAME="feature engineering and EDA Coverage Results" MODIFIED="1761491845800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1761673505416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1761746902580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$1__data_collection_and_preprocessing.coverage" NAME="1. data collection and preprocessing Coverage Results" MODIFIED="1761160912196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$2__feature_engineering_and_EDA.coverage" NAME="2. feature engineering and EDA Coverage Results" MODIFIED="1761306598385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$traditional_models.coverage" NAME="traditional models Coverage Results" MODIFIED="1761662992324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
