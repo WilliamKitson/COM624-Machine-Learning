@@ -34,19 +34,16 @@ df_feature_engineered['hour'] = df_feature_engineered['hour'].dt.hour
 
 # create misspellings feature
 spell_checker = SpellChecker()
-
 unique_dataset_words = pd.concat([df['subject'], df['body']]).dropna().str.split().explode().unique()
-correctly_spelled_words = set(spell_checker.unknown(unique_dataset_words))
 
-def count_correct_spellings(text):
-    return sum(word in correctly_spelled_words for word in str(text).split())
+incorrectly_spelled_words = set(spell_checker.unknown(unique_dataset_words))
 
-df_feature_engineered['misspellings'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
+def count_misspellings(text):
+    return sum(word in incorrectly_spelled_words for word in str(text).split())
+
+df_feature_engineered['misspellings'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
 
 # create correct spelling scaled feature
-spell_checker = SpellChecker()
-
-unique_dataset_words = pd.concat([df['subject'], df['body']]).dropna().str.split().explode().unique()
 correctly_spelled_words = set(spell_checker.known(unique_dataset_words))
 
 def count_correct_spellings(text):

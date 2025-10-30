@@ -32,9 +32,8 @@ columns = {
 for column in columns:
     df[column] = df[column].fillna('')
 
-utils.visualise_missing_rows(df)
-
 # remove names from sender and receiver columns
+
 
 # anonymise email addresses and links within subjects and bodies
 text_columns = {

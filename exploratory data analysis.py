@@ -24,7 +24,7 @@ columns = {
     'body length' : 'body_length',
     'subject length' : 'subject_length',
     'link count' : 'link_count',
-    'correct spellings scaled': 'correct_spellings_scaled'
+    'misspellings': 'misspellings'
 }
 
 for name, column in columns.items():
