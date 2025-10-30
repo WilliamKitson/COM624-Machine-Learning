@@ -1,5 +1,6 @@
 import utils
 import pandas as pd
+import re
 
 # load dataset and visualise missing rows
 df = utils.load_dataset('CEAS_08.csv')
@@ -30,6 +31,23 @@ columns = {
 
 for column in columns:
     df[column] = df[column].fillna('')
+
+utils.visualise_missing_rows(df)
+
+# remove names from sender and receiver columns
+
+# anonymise email addresses and links within subjects and bodies
+text_columns = {
+    'subject',
+    'body'
+}
+
+for column in text_columns:
+    # anonymise links in subject and body
+    df[column] = df[column].astype(str).apply(lambda x: re.sub(r'http\S+', '[LINK]', x))
+
+    # anonymise emails within subject and body
+    df[column] = df[column].astype(str).apply(lambda x: re.sub(r'\S+@\S+', '[EMAIL]', x))
 
 utils.visualise_missing_rows(df)
 
