@@ -4,6 +4,7 @@ import re
 
 # load dataset and visualise missing rows
 df = utils.load_dataset('CEAS_08.csv')
+utils.visualise_missing_rows(df)
 
 # convert object type columns to more useful datatypes
 columns_string_type = {
@@ -32,6 +33,10 @@ columns = {
 for column in columns:
     df[column] = df[column].fillna('')
 
+# replace invalid dates with mean
+valid_dates = df['date'].dropna()
+df['date'] = df['date'].fillna(pd.to_datetime(valid_dates.astype('int64').mean(), utc=True))
+
 # remove names from sender and receiver columns
 
 
@@ -48,7 +53,6 @@ for column in text_columns:
     # anonymise emails within subject and body
     df[column] = df[column].astype(str).apply(lambda x: re.sub(r'\S+@\S+', '[EMAIL]', x))
 
-utils.visualise_missing_rows(df)
-
 # Save cleaned data set
+utils.visualise_missing_rows(df)
 utils.save_dataset(df, 'preprocessed_dataset.csv')
