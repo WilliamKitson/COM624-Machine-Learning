@@ -39,13 +39,16 @@ def count_misspellings(text):
 
 df['misspellings'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
 
-# create correct spelling scaled feature
+# create correct spellings feature
 correctly_spelled_words = set(spell_checker.known(unique_dataset_words))
 
 def count_correct_spellings(text):
     return sum(word in correctly_spelled_words for word in str(text).split())
 
-df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df['body_length'] + df['subject_length'])
+df['correct_spellings'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
+
+# create correct spellings scaled feature
+df['correct_spellings_scaled'] = df['correct_spellings'].div(df['body_length'] + df['subject_length'])
 
 # add label to feature engineered dataset
 df['label'] = df['label']

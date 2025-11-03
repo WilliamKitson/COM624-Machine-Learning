@@ -4,7 +4,7 @@ import seaborn as sns
 
 df = utils.load_dataset('feature_engineered_dataset.csv')
 
-# EDA: bar chart most common domains for phishing and safe emails
+# bar chart most common domains for phishing and safe emails
 email_types = {
     'phishing' : df[df['label'] == 1],
     'safe' : df[df['label'] == 0]
@@ -19,7 +19,7 @@ for name, email_type in email_types.items():
     plt.tight_layout()
     plt.show()
 
-# EDA: boxplot body, subject, and link count by phishing and safe emails
+# boxplot body, subject, and link count by phishing and safe emails
 columns = {
     'body length' : 'body_length',
     'subject length' : 'subject_length',
@@ -35,7 +35,7 @@ for name, column in columns.items():
     plt.ylabel(name)
     plt.show()
 
-# EDA: line graph safe and phishing emails by hour
+# line graph safe and phishing emails by hour
 for name, email_type in email_types.items():
     hours_df = email_type['hour'].value_counts().sort_index()
     plt.plot(hours_df.index, hours_df.values, marker='o')
