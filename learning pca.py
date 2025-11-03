@@ -29,8 +29,6 @@ x = vectorizer.fit_transform(df['combined_text'])
 truncated = TruncatedSVD(n_components=2, random_state=0)
 x_reduced = truncated.fit_transform(x)
 
-x_combined = np.hstack([x_reduced, df[['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]])
-
 # visualise principal components
 df_pca = pd.DataFrame(x_reduced, columns=[
     'principal_component_1',
@@ -46,8 +44,15 @@ plt.show()
 # Explained variance
 print("Explained variance ratio:", truncated.explained_variance_ratio_)
 
-# split dataset into features (x) and target variables (y)
-x = x_combined
+# split combine dataset and principal components into features (x) and target variables (y)
+x = np.hstack([x_reduced, df[[
+    'subject_length',
+    'body_length',
+    'link_count',
+    'hour',
+    'correct_spellings_scaled'
+]]])
+
 y = df['label']
 
 # define 80% training and 20% test data
