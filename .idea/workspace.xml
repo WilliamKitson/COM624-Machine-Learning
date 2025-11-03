@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="learning pca.py defined">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learning pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Logistic Regression.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Logistic Regression.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Naive Bayes.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Naive Bayes.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Random Forest.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Random Forest.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/XGBoost.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/XGBoost.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,15 +167,7 @@
       <workItem from="1762176323224" duration="1404000" />
       <workItem from="1762179612329" duration="3000" />
       <workItem from="1762179844566" duration="680000" />
-      <workItem from="1762182634957" duration="3066000" />
-    </task>
-    <task id="LOCAL-00033" summary="feature engineering and EDA.py redefined">
-      <option name="closed" value="true" />
-      <created>1761323609092</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1761323609092</updated>
+      <workItem from="1762182634957" duration="3143000" />
     </task>
     <task id="LOCAL-00034" summary="feature engineering and EDA.py redefined">
       <option name="closed" value="true" />
@@ -566,7 +553,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762187066972</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="learning pca.py defined">
+      <option name="closed" value="true" />
+      <created>1762188013094</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1762188013094</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,5 +1,6 @@
 import utils
 import pandas as pd
+import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
@@ -25,17 +26,18 @@ df['combined_text'] = df[text_columns].fillna('').agg(' '.join, axis=1)
 # vectorise aggregated text
 vectorizer = TfidfVectorizer(max_features=5000)
 x = vectorizer.fit_transform(df['combined_text'])
-truncated = TruncatedSVD(n_components=5, random_state=0)
+truncated = TruncatedSVD(n_components=2, random_state=0)
 x_reduced = truncated.fit_transform(x)
 
+x_combined = np.hstack([x_reduced, df[['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]])
+
 """
-# Create a DataFrame with the first two principal components
+# visualise principal components
 df_pca = pd.DataFrame(x_reduced, columns=[
     'principal_component_1',
     'principal_component_2'
 ])
 
-# Plot the results
 plt.scatter(df_pca['principal_component_1'], df_pca['principal_component_2'], alpha=0.7)
 plt.xlabel('principal component 1')
 plt.ylabel('principal component 2')
@@ -47,7 +49,7 @@ plt.show()
 print("Explained variance ratio:", truncated.explained_variance_ratio_)
 
 # split dataset into features (x) and target variables (y)
-x = x_reduced
+x = x_combined
 y = df['label']
 
 # define 80% training and 20% test data
