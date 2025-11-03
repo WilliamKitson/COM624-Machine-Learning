@@ -6,6 +6,7 @@ from spellchecker import SpellChecker
 df = utils.load_dataset('preprocessed_dataset.csv')
 utils.visualise_missing_rows(df)
 
+# extract domain from sender and receiver
 for column in ['sender', 'receiver']:
     df[f'{column}_domain'] = df[column].str.extract(r'@(.+)$')
     df[f'{column}_domain'] = df[f'{column}_domain'].str.replace('>', '', regex=False)
