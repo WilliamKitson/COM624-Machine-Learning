@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="learning pca.py defined">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learning pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning pca.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Logistic Regression.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Logistic Regression.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Naive Bayes.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Naive Bayes.pkl" afterDir="false" />
@@ -171,23 +172,7 @@
       <workItem from="1762176323224" duration="1404000" />
       <workItem from="1762179612329" duration="3000" />
       <workItem from="1762179844566" duration="680000" />
-      <workItem from="1762182634957" duration="2061000" />
-    </task>
-    <task id="LOCAL-00031" summary="files renamed">
-      <option name="closed" value="true" />
-      <created>1761311819412</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1761311819412</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Traditional Models.py redefined">
-      <option name="closed" value="true" />
-      <created>1761311980661</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1761311980661</updated>
+      <workItem from="1762182634957" duration="3066000" />
     </task>
     <task id="LOCAL-00033" summary="feature engineering and EDA.py redefined">
       <option name="closed" value="true" />
@@ -565,7 +550,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762186609264</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="learning pca.py defined">
+      <option name="closed" value="true" />
+      <created>1762187008912</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1762187008912</updated>
+    </task>
+    <task id="LOCAL-00081" summary="learning pca.py defined">
+      <option name="closed" value="true" />
+      <created>1762187066972</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1762187066972</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +620,7 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$traditional_models.coverage" NAME="traditional models Coverage Results" MODIFIED="1762169807066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering.coverage" NAME="feature engineering Coverage Results" MODIFIED="1762166978875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4_1__Traditional_Models.coverage" NAME="4.1. Traditional Models Coverage Results" MODIFIED="1761304576806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$learning_pca.coverage" NAME="learning pca Coverage Results" MODIFIED="1762186720446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$learning_pca.coverage" NAME="learning pca Coverage Results" MODIFIED="1762187969669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$exploratory_data_analysis.coverage" NAME="exploratory data analysis Coverage Results" MODIFIED="1762166990560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4_2__LSTM.coverage" NAME="4.2. LSTM Coverage Results" MODIFIED="1761236701211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$LSTM_model.coverage" NAME="LSTM model Coverage Results" MODIFIED="1761163302406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

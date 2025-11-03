@@ -25,26 +25,26 @@ df['combined_text'] = df[text_columns].fillna('').agg(' '.join, axis=1)
 # vectorise aggregated text
 vectorizer = TfidfVectorizer(max_features=5000)
 x = vectorizer.fit_transform(df['combined_text'])
+truncated = TruncatedSVD(n_components=5, random_state=0)
+x_reduced = truncated.fit_transform(x)
 
-# Apply PCA using TruncatedSVD
-svd = TruncatedSVD(n_components=2, random_state=0)
-x_reduced = svd.fit_transform(x)
-
+"""
 # Create a DataFrame with the first two principal components
 df_pca = pd.DataFrame(x_reduced, columns=[
-    'PC1',
-    'PC2'
+    'principal_component_1',
+    'principal_component_2'
 ])
 
 # Plot the results
-plt.scatter(df_pca['PC1'], df_pca['PC2'], alpha=0.7)
-plt.xlabel('PC1')
-plt.ylabel('PC2')
-plt.title('PCA of Combined Text Data (via TruncatedSVD)')
+plt.scatter(df_pca['principal_component_1'], df_pca['principal_component_2'], alpha=0.7)
+plt.xlabel('principal component 1')
+plt.ylabel('principal component 2')
+plt.title('PCA of aggregated text')
 plt.show()
+"""
 
 # Explained variance
-print("Explained variance ratio:", svd.explained_variance_ratio_)
+print("Explained variance ratio:", truncated.explained_variance_ratio_)
 
 # split dataset into features (x) and target variables (y)
 x = x_reduced
@@ -75,3 +75,4 @@ for name, model in models.items():
     model_performances[name] = utils.model_performance(y_test, y_pred)
 
 utils.visualise_model_performance(model_performances)
+print(model_performances)
