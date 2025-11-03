@@ -19,7 +19,7 @@ df['subject_length'] = df["subject"].str.len()
 df['body_length'] = df["body"].str.len()
 
 # create link count feature
-df['link_count'] = df['body'].str.count('http')
+df['link_count'] = df['body'].str.count('[LINK]]')
 
 # create hour feature
 df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
