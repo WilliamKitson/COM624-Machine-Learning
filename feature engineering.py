@@ -24,6 +24,8 @@ df['link_count'] = df['body'].str.count('http')
 df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
 df['hour'] = df['hour'].dt.round('h')
 df['hour'] = df['hour'].dt.hour
+valid_hours = df['hour'].dropna()
+df['hour'] = df['hour'].fillna(pd.to_datetime(valid_hours.mean(), utc=True))
 
 # create misspellings feature
 spell_checker = SpellChecker()
