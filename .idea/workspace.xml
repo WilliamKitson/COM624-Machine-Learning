@@ -160,23 +160,7 @@
       <workItem from="1761844976339" duration="1689000" />
       <workItem from="1761902572542" duration="2000" />
       <workItem from="1761902602346" duration="3000" />
-      <workItem from="1762161374010" duration="2989000" />
-    </task>
-    <task id="LOCAL-00021" summary="data collection and preprocessing redefined">
-      <option name="closed" value="true" />
-      <created>1760976177524</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1760976177524</updated>
-    </task>
-    <task id="LOCAL-00022" summary="feature engineering and EDA.py redefined">
-      <option name="closed" value="true" />
-      <created>1760976272205</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1760976272205</updated>
+      <workItem from="1762161374010" duration="3513000" />
     </task>
     <task id="LOCAL-00023" summary="1. data collection and preprocessing redefined">
       <option name="closed" value="true" />
@@ -554,7 +538,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762164329731</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="feature engineering.py redefined">
+      <option name="closed" value="true" />
+      <created>1762164842184</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1762164842184</updated>
+    </task>
+    <task id="LOCAL-00071" summary="feature engineering.py redefined">
+      <option name="closed" value="true" />
+      <created>1762164964319</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1762164964319</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,8 +602,8 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1762162590301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$1__data_collection_and_preprocessing.coverage" NAME="1. data collection and preprocessing Coverage Results" MODIFIED="1761160912196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$2__feature_engineering_and_EDA.coverage" NAME="2. feature engineering and EDA Coverage Results" MODIFIED="1761306598385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$traditional_models.coverage" NAME="traditional models Coverage Results" MODIFIED="1762162455513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering.coverage" NAME="feature engineering Coverage Results" MODIFIED="1762164550195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$traditional_models.coverage" NAME="traditional models Coverage Results" MODIFIED="1762165052806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering.coverage" NAME="feature engineering Coverage Results" MODIFIED="1762165044783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4_1__Traditional_Models.coverage" NAME="4.1. Traditional Models Coverage Results" MODIFIED="1761304576806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$exploratory_data_analysis.coverage" NAME="exploratory data analysis Coverage Results" MODIFIED="1761839534361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4_2__LSTM.coverage" NAME="4.2. LSTM Coverage Results" MODIFIED="1761236701211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
