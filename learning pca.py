@@ -1,11 +1,13 @@
 import utils
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.decomposition import TruncatedSVD
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
+from xgboost import XGBClassifier
+from matplotlib import pyplot as plt
+from sklearn.decomposition import TruncatedSVD
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # load dataset
 df = utils.load_dataset('feature_engineered_dataset.csv')
@@ -53,7 +55,22 @@ scaler = StandardScaler()
 x_train_scaled = scaler.fit_transform(x_train)
 x_test_scaled = scaler.transform(x_test)
 
-model = LogisticRegression()
-model.fit(x_train_scaled, y_train)
-y_pred = model.predict(x_test_scaled)
-utils.visualise_model('logistic regression', y_test, y_pred)
+# loop through, train, and evaluate models
+models = {
+    'Random Forest': RandomForestClassifier(),
+    'Logistic Regression': LogisticRegression(),
+    'Naive Bayes': GaussianNB(),
+    'XGBoost': XGBClassifier()
+}
+
+model_performances = {
+}
+
+for name, model in models.items():
+    model.fit(x_train_scaled, y_train)
+    y_pred = model.predict(x_test_scaled)
+    utils.save_model(name, model)
+    utils.visualise_model(name, y_test, y_pred)
+    model_performances[name] = utils.model_performance(y_test, y_pred)
+
+utils.visualise_model_performance(model_performances)
