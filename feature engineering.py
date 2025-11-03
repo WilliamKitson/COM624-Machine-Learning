@@ -1,6 +1,5 @@
 import utils
 import pandas as pd
-import numpy as np
 from spellchecker import SpellChecker
 
 # load cleaned training dataset
@@ -11,13 +10,8 @@ utils.visualise_missing_rows(df)
 df_feature_engineered = pd.DataFrame()
 
 for column in ['sender', 'receiver']:
-    df_feature_engineered[f'{column}_domain'] = np.where(
-        df[column].str.contains(r'<.*>'),
-        df[column].str.extract(r'<([^>]+)>')[0],
-        df[column]
-    )
-
-    df_feature_engineered[f'{column}_domain'] = df_feature_engineered[f'{column}_domain'].str.split('@').str[1]
+    df_feature_engineered[f'{column}_domain'] = df[column].str.extract(r'@(.+)$')
+    df_feature_engineered[f'{column}_domain'] = df_feature_engineered[f'{column}_domain'].str.replace('>', '', regex=False)
 
 # create subject length feature
 df_feature_engineered['subject_length'] = df["subject"].str.len()
@@ -57,3 +51,4 @@ df_feature_engineered['label'] = df['label']
 
 # save dataset for exploratory data analysis
 utils.save_dataset(df_feature_engineered, 'feature_engineered_dataset.csv')
+utils.visualise_missing_rows(df_feature_engineered)
