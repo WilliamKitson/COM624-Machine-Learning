@@ -28,10 +28,13 @@ svd = TruncatedSVD(n_components=2, random_state=0)
 x_reduced = svd.fit_transform(x)
 
 # Create a DataFrame with the first two principal components
-pca_df = pd.DataFrame(x_reduced, columns=['PC1', 'PC2'])
+df_pca = pd.DataFrame(x_reduced, columns=[
+    'PC1',
+    'PC2'
+])
 
 # Plot the results
-plt.scatter(pca_df['PC1'], pca_df['PC2'], alpha=0.7)
+plt.scatter(df_pca['PC1'], df_pca['PC2'], alpha=0.7)
 plt.xlabel('PC1')
 plt.ylabel('PC2')
 plt.title('PCA of Combined Text Data (via TruncatedSVD)')
