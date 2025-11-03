@@ -5,6 +5,7 @@ from spellchecker import SpellChecker
 
 # load cleaned training dataset
 df = utils.load_dataset('preprocessed_dataset.csv')
+utils.visualise_missing_rows(df)
 
 # extract email domain from sender and receiver
 df_feature_engineered = pd.DataFrame()
@@ -53,9 +54,6 @@ df_feature_engineered['correct_spellings_scaled'] = df['subject'].apply(count_co
 
 # add label to feature engineered dataset
 df_feature_engineered['label'] = df['label']
-
-# drop columns with missing values and visualise
-utils.visualise_missing_rows(df)
 
 # save dataset for exploratory data analysis
 utils.save_dataset(df_feature_engineered, 'feature_engineered_dataset.csv')

@@ -7,7 +7,8 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
 # load exploratory data analysis dataset
-df = utils.load_dataset('exploratory_data_analysis.csv')
+df = utils.load_dataset('feature_engineered_dataset.csv')
+utils.visualise_missing_rows(df)
 
 # split dataset into features (x) and target variables (y)
 x = df[['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]

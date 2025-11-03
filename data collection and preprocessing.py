@@ -23,15 +23,13 @@ df['date'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
 df.drop(['urls'], axis=1, inplace=True)
 
 # replace null subjects and receivers with empty string
-utils.visualise_missing_rows(df)
-
 columns = {
     'subject',
     'receiver'
 }
 
 for column in columns:
-    df[column] = df[column].fillna('')
+    df[column] = df[column].fillna('[MISSING]')
 
 # replace invalid dates with mean
 valid_dates = df['date'].dropna()
@@ -54,5 +52,5 @@ for column in text_columns:
     df[column] = df[column].astype(str).apply(lambda x: re.sub(r'\S+@\S+', '[EMAIL]', x))
 
 # Save cleaned data set
-utils.visualise_missing_rows(df)
 utils.save_dataset(df, 'preprocessed_dataset.csv')
+utils.visualise_missing_rows(df)
