@@ -6,26 +6,24 @@ from spellchecker import SpellChecker
 df = utils.load_dataset('preprocessed_dataset.csv')
 utils.visualise_missing_rows(df)
 
-# extract email domain from sender and receiver
-df_feature_engineered = pd.DataFrame()
-
 for column in ['sender', 'receiver']:
-    df_feature_engineered[f'{column}_domain'] = df[column].str.extract(r'@(.+)$')
-    df_feature_engineered[f'{column}_domain'] = df_feature_engineered[f'{column}_domain'].str.replace('>', '', regex=False)
+    df[f'{column}_domain'] = df[column].str.extract(r'@(.+)$')
+    df[f'{column}_domain'] = df[f'{column}_domain'].str.replace('>', '', regex=False)
+    df[f'{column}_domain'] = df[f'{column}_domain'].fillna('[MISSING]')
 
 # create subject length feature
-df_feature_engineered['subject_length'] = df["subject"].str.len()
+df['subject_length'] = df["subject"].str.len()
 
 # create body length feature
-df_feature_engineered['body_length'] = df["body"].str.len()
+df['body_length'] = df["body"].str.len()
 
 # create link count feature
-df_feature_engineered['link_count'] = df['body'].str.count('http')
+df['link_count'] = df['body'].str.count('http')
 
 # create hour feature
-df_feature_engineered['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
-df_feature_engineered['hour'] = df_feature_engineered['hour'].dt.round('h')
-df_feature_engineered['hour'] = df_feature_engineered['hour'].dt.hour
+df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
+df['hour'] = df['hour'].dt.round('h')
+df['hour'] = df['hour'].dt.hour
 
 # create misspellings feature
 spell_checker = SpellChecker()
@@ -36,7 +34,7 @@ incorrectly_spelled_words = set(spell_checker.unknown(unique_dataset_words))
 def count_misspellings(text):
     return sum(word in incorrectly_spelled_words for word in str(text).split())
 
-df_feature_engineered['misspellings'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
+df['misspellings'] = df['subject'].apply(count_misspellings) + df['body'].apply(count_misspellings)
 
 # create correct spelling scaled feature
 correctly_spelled_words = set(spell_checker.known(unique_dataset_words))
@@ -44,11 +42,11 @@ correctly_spelled_words = set(spell_checker.known(unique_dataset_words))
 def count_correct_spellings(text):
     return sum(word in correctly_spelled_words for word in str(text).split())
 
-df_feature_engineered['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df_feature_engineered['body_length'] + df_feature_engineered['subject_length'])
+df['correct_spellings_scaled'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings) / (df['body_length'] + df['subject_length'])
 
 # add label to feature engineered dataset
-df_feature_engineered['label'] = df['label']
+df['label'] = df['label']
 
 # save dataset for exploratory data analysis
-utils.save_dataset(df_feature_engineered, 'feature_engineered_dataset.csv')
-utils.visualise_missing_rows(df_feature_engineered)
+utils.save_dataset(df, 'feature_engineered_dataset.csv')
+utils.visualise_missing_rows(df)
