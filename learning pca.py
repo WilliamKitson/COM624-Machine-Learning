@@ -31,7 +31,6 @@ x_reduced = truncated.fit_transform(x)
 
 x_combined = np.hstack([x_reduced, df[['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]])
 
-"""
 # visualise principal components
 df_pca = pd.DataFrame(x_reduced, columns=[
     'principal_component_1',
@@ -43,7 +42,6 @@ plt.xlabel('principal component 1')
 plt.ylabel('principal component 2')
 plt.title('PCA of aggregated text')
 plt.show()
-"""
 
 # Explained variance
 print("Explained variance ratio:", truncated.explained_variance_ratio_)
