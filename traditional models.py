@@ -7,11 +7,10 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
 # load exploratory data analysis dataset
-df = utils.load_dataset('feature_engineered_dataset.csv')
-utils.visualise_missing_rows(df)
+df = utils.load_dataset('training_dataset.csv')
 
 # split dataset into features (x) and target variables (y)
-x = df[['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]
+x = df[['principal_component_1', 'principal_component_2', 'subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled']]
 y = df['label']
 
 # define 80% training and 20% test data
@@ -39,3 +38,4 @@ for name, model in models.items():
     model_performances[name] = utils.model_performance(y_test, y_pred)
 
 utils.visualise_model_performance(model_performances)
+print(model_performances)
