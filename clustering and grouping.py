@@ -20,20 +20,36 @@ plt.title('temp')
 plt.show()
 
 #
-within_cluster_sum_of_squares = []
+inertia = []
 
 for i in range(1, 11):
     kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42)
     kmeans.fit(x)
-    within_cluster_sum_of_squares.append(kmeans.inertia_)
+    inertia.append(kmeans.inertia_)
 
-plt.plot(range(1, 11), within_cluster_sum_of_squares)
-plt.title('The Elbow Method')
-plt.xlabel('Number of clusters')
-plt.ylabel('within cluster sum of squares')
+plt.plot(range(1, 11), inertia)
+plt.title('elbow method')
+plt.xlabel('clusters count')
+plt.ylabel('inertia')
 plt.show()
 
+# Training the K-Means model on the dataset
+kmeans = KMeans(n_clusters=5, init='k-means++', random_state=42)
+y_kmeans = kmeans.fit_predict(x)
 
+# Visualising the clusters
+plt.scatter(x[y_kmeans == 0, 0], x[y_kmeans == 0, 1], s=100, c='red', label='Cluster 1')
+plt.scatter(x[y_kmeans == 1, 0], x[y_kmeans == 1, 1], s=100, c='blue', label='Cluster 2')
+plt.scatter(x[y_kmeans == 2, 0], x[y_kmeans == 2, 1], s=100, c='green', label='Cluster 3')
+plt.scatter(x[y_kmeans == 3, 0], x[y_kmeans == 3, 1], s=100, c='cyan', label='Cluster 4')
+plt.scatter(x[y_kmeans == 4, 0], x[y_kmeans == 4, 1], s=100, c='magenta', label='Cluster 5')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
+plt.title('temp')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)  # Optional, for better readability
+plt.show()
 
 
 
