@@ -44,4 +44,4 @@ plt.title('PCA of aggregated text')
 plt.show()
 
 # save training dataset
-utils.save_dataset(df_pca, 'training_dataset.csv')
+utils.save_dataset(df_pca, 'pca_dataset.csv')
