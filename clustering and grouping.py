@@ -48,7 +48,7 @@ plt.title('temp')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
-plt.grid(True)  # Optional, for better readability
+plt.grid(True)
 plt.show()
 
 
