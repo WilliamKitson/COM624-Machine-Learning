@@ -6,6 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
+from sklearn.cluster import DBSCAN
 
 # load dataset
 df = utils.load_dataset('feature_engineered_dataset.csv')
@@ -65,7 +66,7 @@ plt.ylabel('inertia')
 plt.show()
 
 # Training the K-Means model on the dataset
-kmeans = KMeans(n_clusters=5, init='k-means++', random_state=42)
+kmeans = KMeans(n_clusters=4, init='k-means++', random_state=42)
 y_kmeans = kmeans.fit_predict(x)
 
 # Visualising the clusters
@@ -73,11 +74,34 @@ plt.scatter(x[y_kmeans == 0, 0], x[y_kmeans == 0, 1], s=100, c='red', label='Clu
 plt.scatter(x[y_kmeans == 1, 0], x[y_kmeans == 1, 1], s=100, c='blue', label='Cluster 2')
 plt.scatter(x[y_kmeans == 2, 0], x[y_kmeans == 2, 1], s=100, c='green', label='Cluster 3')
 plt.scatter(x[y_kmeans == 3, 0], x[y_kmeans == 3, 1], s=100, c='cyan', label='Cluster 4')
-plt.scatter(x[y_kmeans == 4, 0], x[y_kmeans == 4, 1], s=100, c='magenta', label='Cluster 5')
 plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
-plt.title('temp')
-plt.xlabel('x')
-plt.ylabel('y')
+plt.title('K-Means Clustering')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# DBSCAN
+dbscan = DBSCAN(eps=2, min_samples=5)
+y_dbscan = dbscan.fit_predict(x)
+
+plt.figure(figsize=(8, 6))
+
+#
+labels = y_dbscan
+unique_labels = set(labels)
+
+for label in unique_labels:
+    mask = (labels == label)
+    plt.scatter(x[mask, 0], x[mask, 1], s=50, label=f'Cluster {label}')
+
+    if label == -1:
+        plt.scatter(x[mask, 0], x[mask, 1], s=50, c='black', label='Noise')
+
+plt.title('DBSCAN Clustering')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
 plt.legend()
 plt.grid(True)
 plt.show()
