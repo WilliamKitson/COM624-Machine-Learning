@@ -1,22 +1,53 @@
 import utils
 import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
-from sklearn.decomposition import TruncatedSVD
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 # load dataset
 df = utils.load_dataset('feature_engineered_dataset.csv')
 
+# collect numeric columns from dataframe
+df_numeric = df.select_dtypes(include=[np.number])
+
+# combine and vectorise text columns from dataframe
+df['combined_text'] = df[[
+    'sender',
+    'subject',
+    'body',
+    'sender_domain'
+]].fillna('').agg(' '.join, axis=1)
+
+vectorizer = TfidfVectorizer(max_features=5000)
+text_tfidf = vectorizer.fit_transform(df['combined_text'])
+text_tfidf_df = pd.DataFrame(text_tfidf.toarray(), columns=vectorizer.get_feature_names_out())
+
+# concatenate numeric and text dataframes and scale
+df_pca = pd.concat([df_numeric.reset_index(drop=True), text_tfidf_df.reset_index(drop=True)], axis=1)
+scaler = StandardScaler()
+full_scaled = scaler.fit_transform(df_pca)
+
+# perform principal component analysis on concatenated dataframe
+pca = PCA(n_components=2, random_state=42)
+x_pca = pca.fit_transform(full_scaled)
+
+# save principal components to pca dataframe
+df_pca = pd.DataFrame(x_pca, columns=[
+    'principal_component_1',
+    'principal_component_2'
+])
+
 #
-x = df.iloc[:, [8, 9]].values
+x = df_pca.iloc[:, [0, 1]].values
 
 #
 plt.scatter(x[:, 0], x[:, 1])
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('temp')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.title('PCA')
 plt.show()
 
 #
@@ -51,44 +82,5 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-
-
-
-
-# aggregate all text columns
-text_columns = [
-    'sender',
-    'subject',
-    'body',
-    'sender_domain'
-]
-
-df['combined_text'] = df[text_columns].fillna('').agg(' '.join, axis=1)
-
-# vectorise aggregated text
-vectorizer = TfidfVectorizer(max_features=5000)
-x = vectorizer.fit_transform(df['combined_text'])
-truncated = TruncatedSVD(n_components=2, random_state=0)
-x_reduced = truncated.fit_transform(x)
-
-# visualise principal components
-df_training = pd.DataFrame(x_reduced, columns=[
-    'principal_component_1',
-    'principal_component_2'
-])
-
-plt.scatter(df_training['principal_component_1'], df_training['principal_component_2'], alpha=0.7)
-plt.xlabel('principal component 1')
-plt.ylabel('principal component 2')
-plt.title('PCA of aggregated text')
-plt.show()
-
-# explained variance
-print("Explained variance ratio:", truncated.explained_variance_ratio_)
-
-# copy columns from feature engineered dataset to training dataset
-for column in ['subject_length', 'body_length', 'link_count', 'hour', 'correct_spellings_scaled', 'label']:
-    df_training[column] = df[column]
-
 # save training dataset
-utils.save_dataset(df_training, 'training_dataset.csv')
+utils.save_dataset(df_pca, 'training_dataset.csv')
