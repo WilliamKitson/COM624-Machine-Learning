@@ -7,10 +7,10 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
 # load exploratory data analysis dataset
-df = utils.load_dataset('feature_engineered_dataset.csv')
+df = utils.load_dataset('privacy_preserved_dataset.csv')
 
 # split dataset into features (x) and target variables (y)
-x = df[['subject_length', 'body_length', 'total_word_count', 'link_count', 'hour', 'correct_spellings_scaled']]
+x = df.drop('label', axis=1)
 y = df['label']
 
 # define 80% training and 20% test data

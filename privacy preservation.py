@@ -10,7 +10,7 @@ df_numeric = df.select_dtypes(include=[np.number])
 df_numeric.drop('label', axis=1, inplace=True)
 
 # apply differential privacy to dataset
-epsilon = 1.0
+epsilon = 20.0
 sensitivity = df_numeric.max() - df_numeric.min()
 
 df_dp = df_numeric + np.random.laplace(

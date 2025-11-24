@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="clustering and grouping.py redefined">
-      <change afterPath="$PROJECT_DIR$/datasets/privacy_preserved_dataset.csv" afterDir="false" />
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="privacy preservation.py redefined">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/privacy_preserved_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/privacy_preserved_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Logistic Regression.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Logistic Regression.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Naive Bayes.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Naive Bayes.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Random Forest.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Random Forest.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/XGBoost.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/XGBoost.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/privacy preservation.py" beforeDir="false" afterPath="$PROJECT_DIR$/privacy preservation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traditional models.py" beforeDir="false" afterPath="$PROJECT_DIR$/traditional models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,14 +184,6 @@
       <workItem from="1763716569065" duration="9085000" />
       <workItem from="1763979025867" duration="2010000" />
       <workItem from="1763993799241" duration="2481000" />
-    </task>
-    <task id="LOCAL-00052" summary="traditional models.py redefined">
-      <option name="closed" value="true" />
-      <created>1761500955500</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1761500955500</updated>
     </task>
     <task id="LOCAL-00053" summary="privacy preserving techniques.py defined">
       <option name="closed" value="true" />
@@ -571,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763996510525</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="privacy preservation.py redefined">
+      <option name="closed" value="true" />
+      <created>1763999174828</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1763999174828</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +595,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="training and test data encoded and split" />
     <MESSAGE value="4. Machine Learning Models.py redefined" />
     <MESSAGE value="4.2. LSTM defined" />
     <MESSAGE value="2. feature engineering and EDA redefined" />
@@ -614,7 +619,8 @@
     <MESSAGE value="feature engineering.py redefined" />
     <MESSAGE value="traditional models.py redefined" />
     <MESSAGE value="clustering and grouping.py redefined" />
-    <option name="LAST_COMMIT_MESSAGE" value="clustering and grouping.py redefined" />
+    <MESSAGE value="privacy preservation.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="privacy preservation.py redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_cleaning.coverage" NAME="data_cleaning Coverage Results" MODIFIED="1759751173475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -624,10 +630,10 @@
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$differential_privacy.coverage" NAME="differential privacy Coverage Results" MODIFIED="1763984590800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$clustering_and_grouping.coverage" NAME="clustering and grouping Coverage Results" MODIFIED="1763997185409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1762162590301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$privacy_preservation.coverage" NAME="privacy preservation Coverage Results" MODIFIED="1763998927310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$privacy_preservation.coverage" NAME="privacy preservation Coverage Results" MODIFIED="1764000586864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$1__data_collection_and_preprocessing.coverage" NAME="1. data collection and preprocessing Coverage Results" MODIFIED="1761160912196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$2__feature_engineering_and_EDA.coverage" NAME="2. feature engineering and EDA Coverage Results" MODIFIED="1761306598385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$traditional_models.coverage" NAME="traditional models Coverage Results" MODIFIED="1763993806932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$traditional_models.coverage" NAME="traditional models Coverage Results" MODIFIED="1764000591419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering.coverage" NAME="feature engineering Coverage Results" MODIFIED="1763979865026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4_1__Traditional_Models.coverage" NAME="4.1. Traditional Models Coverage Results" MODIFIED="1761304576806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$learning_pca.coverage" NAME="learning pca Coverage Results" MODIFIED="1762189361330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
