@@ -19,7 +19,7 @@ df['subject_length'] = df["subject"].str.len()
 df['body_length'] = df["body"].str.len()
 
 # create link count feature
-df['link_count'] = df['body'].str.count('[LINK]]')
+df['link_count'] = df['body'].str.count(r'\[LINK\]')
 
 # create hour feature
 df['hour'] = pd.to_datetime(df['date'], errors='coerce', utc=True)
@@ -48,7 +48,7 @@ def count_correct_spellings(text):
 df['correct_spellings'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
 
 # create correct spellings scaled feature
-df['correct_spellings_scaled'] = df['correct_spellings'].div(df['body_length'] + df['subject_length'])
+df['correct_spellings_scaled'] = df['correct_spellings'] / (df['body_length'] + df['subject_length']) * 100
 
 # add label to feature engineered dataset
 df['label'] = df['label']
