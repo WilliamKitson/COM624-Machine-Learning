@@ -23,6 +23,7 @@ for name, email_type in email_types.items():
 columns = {
     'body length' : 'body_length',
     'subject length' : 'subject_length',
+    'total words' : 'total_word_count',
     'link count' : 'link_count',
     'misspellings': 'misspellings',
     'correct spellings': 'correct_spellings',
