@@ -1,6 +1,6 @@
 import utils
 import numpy as np
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
@@ -11,12 +11,20 @@ from sklearn.cluster import DBSCAN
 # load dataset
 df = utils.load_dataset('feature_engineered_dataset.csv')
 
+# drop columns not useful for analysis
+df.drop([
+    'label',
+    'misspellings',
+    'correct_spellings'
+], axis=1, inplace=True)
+
 # collect numeric columns from dataframe
 df_numeric = df.select_dtypes(include=[np.number])
 
+print(df_numeric.head())
+
 # combine and vectorise text columns from dataframe
 df['combined_text'] = df[[
-    'sender',
     'subject',
     'body',
     'sender_domain'
@@ -24,11 +32,11 @@ df['combined_text'] = df[[
 
 vectorizer = TfidfVectorizer(max_features=5000)
 text_tfidf = vectorizer.fit_transform(df['combined_text'])
-text_tfidf_df = pd.DataFrame(text_tfidf.toarray(), columns=vectorizer.get_feature_names_out())
+df_text_tfidf = pd.DataFrame(text_tfidf.toarray(), columns=vectorizer.get_feature_names_out())
 
 # concatenate numeric and text dataframes and scale
-df_pca = pd.concat([df_numeric.reset_index(drop=True), text_tfidf_df.reset_index(drop=True)], axis=1)
-scaler = StandardScaler()
+df_pca = pd.concat([df_numeric.reset_index(drop=True), df_text_tfidf.reset_index(drop=True)], axis=1)
+scaler = RobustScaler()
 full_scaled = scaler.fit_transform(df_pca)
 
 # perform principal component analysis on concatenated dataframe

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="pca temp removed">
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="clustering and grouping.py redefined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clustering and grouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering and grouping.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasets/training_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/training_dataset.csv" afterDir="false" />
@@ -174,15 +174,7 @@
       <workItem from="1762182634957" duration="3143000" />
       <workItem from="1762271710652" duration="2727000" />
       <workItem from="1763716481785" duration="78000" />
-      <workItem from="1763716569065" duration="5332000" />
-    </task>
-    <task id="LOCAL-00045" summary="traditional models.py redefined">
-      <option name="closed" value="true" />
-      <created>1761498347848</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1761498347848</updated>
+      <workItem from="1763716569065" duration="7931000" />
     </task>
     <task id="LOCAL-00046" summary="traditional models.py redefined">
       <option name="closed" value="true" />
@@ -568,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763717422527</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="clustering and grouping.py redefined">
+      <option name="closed" value="true" />
+      <created>1763750196534</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1763750196534</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,18 +607,18 @@
     <MESSAGE value="learning pca.py renamed" />
     <MESSAGE value="clustering and grouping.py removed" />
     <MESSAGE value="clustering and grouping.py renamed" />
-    <MESSAGE value="clustering and grouping.py redefined" />
     <MESSAGE value="pca temp defined" />
     <MESSAGE value="pca temp redefined" />
     <MESSAGE value="pca temp removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="pca temp removed" />
+    <MESSAGE value="clustering and grouping.py redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="clustering and grouping.py redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_cleaning.coverage" NAME="data_cleaning Coverage Results" MODIFIED="1759751173475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$Traditional_Models.coverage" NAME="Traditional Models Coverage Results" MODIFIED="1761493162176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761229901658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering_and_EDA.coverage" NAME="feature engineering and EDA Coverage Results" MODIFIED="1761491845800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$clustering_and_grouping.coverage" NAME="clustering and grouping Coverage Results" MODIFIED="1763749832922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$clustering_and_grouping.coverage" NAME="clustering and grouping Coverage Results" MODIFIED="1763977173909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1762162590301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$1__data_collection_and_preprocessing.coverage" NAME="1. data collection and preprocessing Coverage Results" MODIFIED="1761160912196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$2__feature_engineering_and_EDA.coverage" NAME="2. feature engineering and EDA Coverage Results" MODIFIED="1761306598385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
