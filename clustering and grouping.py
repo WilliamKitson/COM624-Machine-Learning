@@ -21,23 +21,9 @@ df.drop([
 # collect numeric columns from dataframe
 df_numeric = df.select_dtypes(include=[np.number])
 
-print(df_numeric.head())
-
-# combine and vectorise text columns from dataframe
-df['combined_text'] = df[[
-    'subject',
-    'body',
-    'sender_domain'
-]].fillna('').agg(' '.join, axis=1)
-
-vectorizer = TfidfVectorizer(max_features=5000)
-text_tfidf = vectorizer.fit_transform(df['combined_text'])
-df_text_tfidf = pd.DataFrame(text_tfidf.toarray(), columns=vectorizer.get_feature_names_out())
-
 # concatenate numeric and text dataframes and scale
-df_pca = pd.concat([df_numeric.reset_index(drop=True), df_text_tfidf.reset_index(drop=True)], axis=1)
 scaler = RobustScaler()
-full_scaled = scaler.fit_transform(df_pca)
+full_scaled = scaler.fit_transform(df_numeric)
 
 # perform principal component analysis on concatenated dataframe
 pca = PCA(n_components=2, random_state=42)
@@ -82,6 +68,19 @@ plt.scatter(x[y_kmeans == 0, 0], x[y_kmeans == 0, 1], s=100, c='red', label='Clu
 plt.scatter(x[y_kmeans == 1, 0], x[y_kmeans == 1, 1], s=100, c='blue', label='Cluster 2')
 plt.scatter(x[y_kmeans == 2, 0], x[y_kmeans == 2, 1], s=100, c='green', label='Cluster 3')
 plt.scatter(x[y_kmeans == 3, 0], x[y_kmeans == 3, 1], s=100, c='cyan', label='Cluster 4')
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
+plt.title('K-Means Clustering')
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Training the K-Means model on 2 clusters
+kmeans = KMeans(n_clusters=2, init='k-means++', random_state=42)
+y_kmeans = kmeans.fit_predict(x)
+plt.scatter(x[y_kmeans == 0, 0], x[y_kmeans == 0, 1], s=100, c='red', label='Cluster 1')
+plt.scatter(x[y_kmeans == 1, 0], x[y_kmeans == 1, 1], s=100, c='blue', label='Cluster 2')
 plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
 plt.title('K-Means Clustering')
 plt.xlabel('Principal Component 1')
