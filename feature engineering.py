@@ -28,6 +28,9 @@ df['hour'] = df['hour'].dt.hour
 valid_hours = df['hour'].dropna()
 df['hour'] = df['hour'].fillna(valid_hours.mean())
 
+# create total word count feature
+df['total_word_count'] = df['subject'].str.split().apply(len) + df['body'].str.split().apply(len)
+
 # create misspellings feature
 spell_checker = SpellChecker()
 unique_dataset_words = pd.concat([df['subject'], df['body']]).dropna().str.split().explode().unique()
@@ -48,7 +51,7 @@ def count_correct_spellings(text):
 df['correct_spellings'] = df['subject'].apply(count_correct_spellings) + df['body'].apply(count_correct_spellings)
 
 # create correct spellings scaled feature
-df['correct_spellings_scaled'] = df['correct_spellings'] / (df['body_length'] + df['subject_length']) * 100
+df['correct_spellings_scaled'] = df['correct_spellings'] / df['total_word_count'] * 100
 
 # add label to feature engineered dataset
 df['label'] = df['label']
