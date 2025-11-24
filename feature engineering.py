@@ -18,6 +18,9 @@ df['subject_length'] = df["subject"].str.len()
 # create body length feature
 df['body_length'] = df["body"].str.len()
 
+# create total word count feature
+df['total_word_count'] = df['subject'].str.split().apply(len) + df['body'].str.split().apply(len)
+
 # create link count feature
 df['link_count'] = df['body'].str.count(r'\[LINK\]')
 
@@ -27,9 +30,6 @@ df['hour'] = df['hour'].dt.round('h')
 df['hour'] = df['hour'].dt.hour
 valid_hours = df['hour'].dropna()
 df['hour'] = df['hour'].fillna(valid_hours.mean())
-
-# create total word count feature
-df['total_word_count'] = df['subject'].str.split().apply(len) + df['body'].str.split().apply(len)
 
 # create misspellings feature
 spell_checker = SpellChecker()
