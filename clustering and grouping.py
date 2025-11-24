@@ -1,8 +1,6 @@
 import utils
-import numpy as np
 from sklearn.preprocessing import RobustScaler
 from sklearn.decomposition import PCA
-from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -11,19 +9,14 @@ from sklearn.cluster import DBSCAN
 # load dataset
 df = utils.load_dataset('feature_engineered_dataset.csv')
 
-# drop columns not useful for analysis
-df.drop([
-    'label',
-    'misspellings',
-    'correct_spellings'
-], axis=1, inplace=True)
-
-# collect numeric columns from dataframe
-df_numeric = df.select_dtypes(include=[np.number])
+# split dataset into features (x) and target variables (y) and encode
+x = df[['subject_length', 'body_length', 'total_word_count', 'link_count', 'hour', 'correct_spellings_scaled']]
+y = df['label']
+x_dummies = pd.get_dummies(x, drop_first=True)
 
 # concatenate numeric and text dataframes and scale
 scaler = RobustScaler()
-full_scaled = scaler.fit_transform(df_numeric)
+full_scaled = scaler.fit_transform(x_dummies)
 
 # perform principal component analysis on concatenated dataframe
 pca = PCA(n_components=2, random_state=42)
@@ -112,6 +105,3 @@ plt.ylabel('Principal Component 2')
 plt.legend()
 plt.grid(True)
 plt.show()
-
-# save training dataset
-utils.save_dataset(df_pca, 'training_dataset.csv')
