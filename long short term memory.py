@@ -64,3 +64,6 @@ last_window = torch.tensor(features[-sliding_window_size:]).float().unsqueeze(0)
 #
 pred = model(last_window)
 print("Next predicted value:", pred.item())
+
+# save model
+utils.save_model('LSTM', model)
