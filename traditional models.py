@@ -6,7 +6,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 
-# load exploratory data analysis dataset
+# load training dataset
 df = utils.load_dataset('privacy_preserved_dataset.csv')
 
 # split dataset into features (x) and target variables (y)
