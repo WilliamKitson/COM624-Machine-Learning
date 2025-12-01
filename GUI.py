@@ -2,6 +2,7 @@ import streamlit as st
 import utils
 import data_collection_and_preprocessing
 import feature_engineering
+import exploratory_data_analysis
 import clustering_and_grouping
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
@@ -51,7 +52,10 @@ def feature_engineering_page():
 
 def exploratory_data_analysis_page():
     st.title("Exploratory Data Analysis")
-    st.button(label="Analyse", on_click=None)
+
+    if st.button(label="Analyse domains"):
+        for figure in exploratory_data_analysis.analyse_domains():
+            st.pyplot(figure)
 
 def clustering_and_grouping_page():
     st.title("Clustering and Grouping")
