@@ -47,14 +47,12 @@ def prediction_page():
     st.text_area(label="Body", placeholder="Some Body")
     st.button(label="Predict", on_click=None)
 
-pg = st.navigation([
+st.navigation([
     st.Page(data_collection_page, title="Data Collection and Pre-processing"),
     st.Page(feature_engineering_page, title="Feature Engineering"),
     st.Page(exploratory_data_analysis_page, title="Exploratory Data Analysis"),
-    st.Page(clustering_and_grouping_page, title="Data Collection and Pre-processing"),
+    st.Page(clustering_and_grouping_page, title="Clustering and Grouping"),
     st.Page(privacy_preservation_page, title="Privacy Preservation"),
     st.Page(training_page, title = "Training"),
     st.Page(prediction_page, title = "Prediction"),
-])
-
-pg.run()
+]).run()
