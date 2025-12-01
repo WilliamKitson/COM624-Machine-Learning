@@ -54,7 +54,6 @@ def calculate_elbow_method():
 
 calculate_elbow_method().show()
 
-# Training the K-Means model on the dataset
 def calculate_kmeans(clusters):
     kmeans = KMeans(n_clusters=clusters, init='k-means++', random_state=42)
     y_kmeans = kmeans.fit_predict(x)
@@ -73,26 +72,28 @@ def calculate_kmeans(clusters):
 calculate_kmeans(4).show()
 calculate_kmeans(2).show()
 
-# DBSCAN
-dbscan = DBSCAN(eps=2, min_samples=5)
-y_dbscan = dbscan.fit_predict(x)
+def calculate_DBSCAN():
+    dbscan = DBSCAN(eps=2, min_samples=5)
+    y_dbscan = dbscan.fit_predict(x)
 
-plt.figure(figsize=(8, 6))
+    plt.figure(figsize=(8, 6))
 
-#
-labels = y_dbscan
-unique_labels = set(labels)
+    #
+    labels = y_dbscan
+    unique_labels = set(labels)
 
-for label in unique_labels:
-    mask = (labels == label)
-    plt.scatter(x[mask, 0], x[mask, 1], s=50, label=f'Cluster {label}')
+    for label in unique_labels:
+        mask = (labels == label)
+        plt.scatter(x[mask, 0], x[mask, 1], s=50, label=f'Cluster {label}')
 
-    if label == -1:
-        plt.scatter(x[mask, 0], x[mask, 1], s=50, c='black', label='Noise')
+        if label == -1:
+            plt.scatter(x[mask, 0], x[mask, 1], s=50, c='black', label='Noise')
 
-plt.title('DBSCAN Clustering')
-plt.xlabel('Principal Component 1')
-plt.ylabel('Principal Component 2')
-plt.legend()
-plt.grid(True)
-plt.show()
+    plt.title('DBSCAN Clustering')
+    plt.xlabel('Principal Component 1')
+    plt.ylabel('Principal Component 2')
+    plt.legend()
+    plt.grid(True)
+    return plt
+
+calculate_DBSCAN().show()

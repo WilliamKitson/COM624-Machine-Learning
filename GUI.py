@@ -1,6 +1,7 @@
 import streamlit as st
 from clustering_and_grouping import calculate_elbow_method
 from clustering_and_grouping import calculate_kmeans
+from clustering_and_grouping import calculate_DBSCAN
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
@@ -36,7 +37,11 @@ def clustering_and_grouping_page():
         fig = calculate_kmeans(kmeans_slider).gcf()
         kmeans_placeholder.pyplot(fig)
 
-    st.button(label="DBSCAN", on_click=None)
+    DBSCAN_placeholder = st.empty()
+
+    if st.button(label="DBSCAN", on_click=None):
+        fig = calculate_DBSCAN().gcf()
+        DBSCAN_placeholder.pyplot(fig)
 
 def privacy_preservation_page():
     st.title("Privacy Preservation")
