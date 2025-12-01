@@ -1,22 +1,60 @@
 import streamlit as st
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
-st.title("Phishing Email Detection")
 
-st.markdown(
-    "Please use the below tools to run a report on simulated emails."
-)
+def data_collection_page():
+    st.title("Data Collection and Pre-processing")
+    st.button(label="Clean", on_click=None)
 
-st.selectbox("Select Model", [
-    'Random Forest',
-    'Logistic Regression',
-    'Naive Bayes',
-    'XGBoost',
-    "LSTM",
-    "BERT"
+def feature_engineering_page():
+    st.title("Feature Engineering")
+    st.button(label="Engineer", on_click=None)
+
+def exploratory_data_analysis_page():
+    st.title("Exploratory Data Analysis")
+    st.button(label="Analyse", on_click=None)
+
+def clustering_and_grouping_page():
+    st.title("Clustering and Grouping")
+    st.button(label="Cluster", on_click=None)
+
+def privacy_preservation_page():
+    st.title("Privacy Preservation")
+    st.button(label="Privatise", on_click=None)
+
+def training_page():
+    st.title("Traditional Models, LSTM, and BERT")
+    st.button(label="Train", on_click=None)
+
+def prediction_page():
+    st.title("Prediction")
+
+    st.markdown(
+        "Please use the below tools to run a report on simulated emails."
+    )
+
+    st.selectbox("Select Model", [
+        'Random Forest',
+        'Logistic Regression',
+        'Naive Bayes',
+        'XGBoost',
+        "LSTM",
+        "BERT"
+    ])
+    st.text_input(label="Sender", placeholder="some.dude@someplace.com")
+    st.time_input(label="Time")
+    st.text_input(label="Subject", placeholder="Some Subject")
+    st.text_area(label="Body", placeholder="Some Body")
+    st.button(label="Predict", on_click=None)
+
+pg = st.navigation([
+    st.Page(data_collection_page, title="Data Collection and Pre-processing"),
+    st.Page(feature_engineering_page, title="Feature Engineering"),
+    st.Page(exploratory_data_analysis_page, title="Exploratory Data Analysis"),
+    st.Page(clustering_and_grouping_page, title="Data Collection and Pre-processing"),
+    st.Page(privacy_preservation_page, title="Privacy Preservation"),
+    st.Page(training_page, title = "Training"),
+    st.Page(prediction_page, title = "Prediction"),
 ])
-st.text_input(label="Sender", placeholder="some.dude@someplace.com")
-st.time_input(label="Time")
-st.text_input(label="Subject", placeholder="Some Subject")
-st.text_area(label="Body",placeholder="Some Body")
-st.button(label="Submit", key=None, help=None, on_click=None, args=None, kwargs=None, type="secondary", icon=None, disabled=False, use_container_width=None, width="content")
+
+pg.run()
