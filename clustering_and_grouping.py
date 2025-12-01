@@ -38,19 +38,21 @@ plt.ylabel('Principal Component 2')
 plt.title('PCA')
 plt.show()
 
-#
-inertia = []
+def calculate_elbow_method():
+    inertia = []
 
-for i in range(1, 11):
-    kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42)
-    kmeans.fit(x)
-    inertia.append(kmeans.inertia_)
+    for i in range(1, 11):
+        kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42)
+        kmeans.fit(x)
+        inertia.append(kmeans.inertia_)
 
-plt.plot(range(1, 11), inertia)
-plt.title('elbow method')
-plt.xlabel('clusters count')
-plt.ylabel('inertia')
-plt.show()
+    plt.plot(range(1, 11), inertia)
+    plt.title('elbow method')
+    plt.xlabel('clusters count')
+    plt.ylabel('inertia')
+    return plt
+
+calculate_elbow_method().show()
 
 # Training the K-Means model on the dataset
 kmeans = KMeans(n_clusters=4, init='k-means++', random_state=42)

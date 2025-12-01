@@ -7,6 +7,7 @@
     <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="GUI redefined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clustering and grouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering_and_grouping.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,47 +47,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.1. data collection and preprocessing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.2. feature engineering and EDA.executor&quot;: &quot;Run&quot;,
-    &quot;Python.4. Machine Learning Models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.4.1. Traditional Models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.4.2. LSTM.executor&quot;: &quot;Run&quot;,
-    &quot;Python.GUI.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LSTM model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Traditional Models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.clustering and grouping.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data collection and preprocessing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_cleaning.executor&quot;: &quot;Run&quot;,
-    &quot;Python.deep learning.executor&quot;: &quot;Run&quot;,
-    &quot;Python.differential privacy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.exploratory data analysis.executor&quot;: &quot;Run&quot;,
-    &quot;Python.feature engineering and EDA.executor&quot;: &quot;Run&quot;,
-    &quot;Python.feature engineering.executor&quot;: &quot;Run&quot;,
-    &quot;Python.learning pca.executor&quot;: &quot;Run&quot;,
-    &quot;Python.long short term memory.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pca temp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.principal component analysis.executor&quot;: &quot;Run&quot;,
-    &quot;Python.privacy preservation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.privacy preserving techniques.executor&quot;: &quot;Run&quot;,
-    &quot;Python.traditional models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/williamkitson/PyCharmProjects/4kitsw10 COM624 AE1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.1. data collection and preprocessing.executor": "Run",
+    "Python.2. feature engineering and EDA.executor": "Run",
+    "Python.4. Machine Learning Models.executor": "Run",
+    "Python.4.1. Traditional Models.executor": "Run",
+    "Python.4.2. LSTM.executor": "Run",
+    "Python.GUI.executor": "Run",
+    "Python.LSTM model.executor": "Run",
+    "Python.Traditional Models.executor": "Run",
+    "Python.clustering and grouping.executor": "Run",
+    "Python.clustering_and_grouping.executor": "Run",
+    "Python.data collection and preprocessing.executor": "Run",
+    "Python.data_cleaning.executor": "Run",
+    "Python.deep learning.executor": "Run",
+    "Python.differential privacy.executor": "Run",
+    "Python.exploratory data analysis.executor": "Run",
+    "Python.feature engineering and EDA.executor": "Run",
+    "Python.feature engineering.executor": "Run",
+    "Python.learning pca.executor": "Run",
+    "Python.long short term memory.executor": "Run",
+    "Python.pca temp.executor": "Run",
+    "Python.principal component analysis.executor": "Run",
+    "Python.privacy preservation.executor": "Run",
+    "Python.privacy preserving techniques.executor": "Run",
+    "Python.traditional models.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/williamkitson/PyCharmProjects/4kitsw10 COM624 AE1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -187,15 +189,7 @@
       <workItem from="1764263783462" duration="395000" />
       <workItem from="1764264623685" duration="804000" />
       <workItem from="1764581214391" duration="1912000" />
-      <workItem from="1764583144880" duration="2051000" />
-    </task>
-    <task id="LOCAL-00059" summary="feature engineering.py redefined">
-      <option name="closed" value="true" />
-      <created>1761665196182</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1761665196182</updated>
+      <workItem from="1764583144880" duration="3961000" />
     </task>
     <task id="LOCAL-00060" summary="feature engineering.py redefined">
       <option name="closed" value="true" />
@@ -581,7 +575,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764584832833</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="GUI redefined">
+      <option name="closed" value="true" />
+      <created>1764585372270</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1764585372270</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,8 +631,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761229901658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$feature_engineering_and_EDA.coverage" NAME="feature engineering and EDA Coverage Results" MODIFIED="1761491845800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$clustering_and_grouping.coverage" NAME="clustering and grouping Coverage Results" MODIFIED="1763997185409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1764258330509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1764590200358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$clustering_and_grouping.coverage" NAME="clustering_and_grouping Coverage Results" MODIFIED="1764590290359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$data_collection_and_preprocessing.coverage" NAME="data collection and preprocessing Coverage Results" MODIFIED="1764258506658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$long_short_term_memory.coverage" NAME="long short term memory Coverage Results" MODIFIED="1764158545953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$2__feature_engineering_and_EDA.coverage" NAME="2. feature engineering and EDA Coverage Results" MODIFIED="1761306598385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

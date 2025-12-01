@@ -1,4 +1,5 @@
 import streamlit as st
+from clustering_and_grouping import calculate_elbow_method
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
@@ -16,7 +17,22 @@ def exploratory_data_analysis_page():
 
 def clustering_and_grouping_page():
     st.title("Clustering and Grouping")
-    st.button(label="Cluster", on_click=None)
+    st.markdown(
+        "This page performs clustering and grouping using K-Means clustering and DBSCAN. "
+        "The optimum cluster count for K-Means is calculated using the Elbow Method, although you can define the number of clusters you want manually using the slider."
+    )
+
+    elbow_placeholder = st.empty()
+
+    if st.button(label="Run Elbow Method"):
+        fig = calculate_elbow_method().gcf()
+        elbow_placeholder.pyplot(fig)
+
+    st.slider(label="Cluster Count", min_value=0, max_value=20)
+
+    st.button(label="K-Means Cluster", on_click=None)
+
+    st.button(label="DBSCAN", on_click=None)
 
 def privacy_preservation_page():
     st.title("Privacy Preservation")
