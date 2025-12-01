@@ -50,6 +50,8 @@ def feature_engineering_page():
         st.session_state.feature_engineered_dataset = feature_engineering.engineer_features(df)
         st.dataframe(st.session_state.feature_engineered_dataset)
 
+    #todo finish EDA
+
 def exploratory_data_analysis_page():
     st.title("Exploratory Data Analysis")
 
@@ -95,6 +97,8 @@ def clustering_and_grouping_page():
 
 def privacy_preservation_page():
     st.title("Privacy Preservation")
+
+    differential_privacy_epsilon_slider = st.slider("Differential Privacy Epsilon", 0, 100)
     st.button(label="Privatise", on_click=None)
 
 def training_page():
