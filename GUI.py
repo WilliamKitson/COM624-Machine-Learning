@@ -1,6 +1,7 @@
 import streamlit as st
 import utils
 import data_collection_and_preprocessing
+import feature_engineering
 import clustering_and_grouping
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
@@ -29,18 +30,24 @@ def data_collection_page():
     if st.button(label="Clean"):
         st.session_state.missing_data_before = utils.visualise_missing_rows(df).gcf()
         st.pyplot(st.session_state.missing_data_before)
-
         df = data_collection_and_preprocessing.clean_dataset(df)
-
         st.session_state.cleaned_dataset = df
         st.dataframe(st.session_state.cleaned_dataset)
-
         st.session_state.missing_data_after = utils.visualise_missing_rows(df).gcf()
         st.pyplot(st.session_state.missing_data_after)
 
 def feature_engineering_page():
     st.title("Feature Engineering")
-    st.button(label="Engineer", on_click=None)
+
+    if "feature_engineered_dataset" not in st.session_state:
+        st.session_state.feature_engineered_dataset = None
+
+    df = utils.load_dataset('preprocessed_dataset.csv')
+    st.dataframe(df)
+
+    if st.button(label="Engineer"):
+        st.session_state.feature_engineered_dataset = feature_engineering.engineer_features(df)
+        st.dataframe(st.session_state.feature_engineered_dataset)
 
 def exploratory_data_analysis_page():
     st.title("Exploratory Data Analysis")
