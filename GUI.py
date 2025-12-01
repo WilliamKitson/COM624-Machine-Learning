@@ -10,6 +10,12 @@ def data_collection_page():
         st.session_state.cleaned_dataset = None
 
     st.title("Data Collection and Pre-processing")
+    st.markdown(
+        "This page performs pre-processing on my dataset (CEAS_08). The cleaning process includes "
+        "converting columns into more useful types, dropping columns not useful for analysis, "
+        "replacing null subjects and receivers with empty strings, replace invalid dates with mean date "
+        "and anonymising email addresses and links within subjects and bodies."
+    )
 
     df = utils.load_dataset('CEAS_08.csv')
     st.dataframe(df)
