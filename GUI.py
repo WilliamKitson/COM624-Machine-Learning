@@ -1,13 +1,23 @@
 import streamlit as st
-from clustering_and_grouping import calculate_elbow_method
-from clustering_and_grouping import calculate_kmeans
-from clustering_and_grouping import calculate_DBSCAN
+import utils
+import data_collection_and_preprocessing
+import clustering_and_grouping
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
 def data_collection_page():
+    if "cleaned_dataset" not in st.session_state:
+        st.session_state.cleaned_dataset = None
+
     st.title("Data Collection and Pre-processing")
-    st.button(label="Clean", on_click=None)
+
+    df = utils.load_dataset('CEAS_08.csv')
+    st.dataframe(df)
+
+    if st.button(label="Clean"):
+        st.session_state.cleaned_dataset = data_collection_and_preprocessing.clean_dataset(df)
+
+    st.dataframe(st.session_state.cleaned_dataset)
 
 def feature_engineering_page():
     st.title("Feature Engineering")
@@ -26,27 +36,29 @@ def clustering_and_grouping_page():
 
     if "elbow_fig" not in st.session_state:
         st.session_state.elbow_fig = None
+
     if "kmeans_fig" not in st.session_state:
         st.session_state.kmeans_fig = None
+
     if "dbscan_fig" not in st.session_state:
         st.session_state.dbscan_fig = None
 
     if st.button("Run Elbow Method"):
-        st.session_state.elbow_fig = calculate_elbow_method().gcf()
+        st.session_state.elbow_fig = clustering_and_grouping.calculate_elbow_method().gcf()
 
     if st.session_state.elbow_fig:
         st.pyplot(st.session_state.elbow_fig)
 
-    kmeans_slider = st.slider("Cluster Count", 1, 20)
+    kmeans_slider = st.slider("Cluster Count", 2, 20)
 
     if st.button("K-Means Cluster"):
-        st.session_state.kmeans_fig = calculate_kmeans(kmeans_slider).gcf()
+        st.session_state.kmeans_fig = clustering_and_grouping.calculate_kmeans(kmeans_slider).gcf()
 
     if st.session_state.kmeans_fig:
         st.pyplot(st.session_state.kmeans_fig)
 
     if st.button("DBSCAN"):
-        st.session_state.dbscan_fig = calculate_DBSCAN().gcf()
+        st.session_state.dbscan_fig = clustering_and_grouping.calculate_DBSCAN().gcf()
 
     if st.session_state.dbscan_fig:
         st.pyplot(st.session_state.dbscan_fig)
