@@ -55,34 +55,23 @@ def calculate_elbow_method():
 calculate_elbow_method().show()
 
 # Training the K-Means model on the dataset
-kmeans = KMeans(n_clusters=4, init='k-means++', random_state=42)
-y_kmeans = kmeans.fit_predict(x)
+def calculate_kmeans(clusters):
+    kmeans = KMeans(n_clusters=clusters, init='k-means++', random_state=42)
+    y_kmeans = kmeans.fit_predict(x)
 
-# Visualising the clusters
-plt.scatter(x[y_kmeans == 0, 0], x[y_kmeans == 0, 1], s=100, c='red', label='Cluster 1')
-plt.scatter(x[y_kmeans == 1, 0], x[y_kmeans == 1, 1], s=100, c='blue', label='Cluster 2')
-plt.scatter(x[y_kmeans == 2, 0], x[y_kmeans == 2, 1], s=100, c='green', label='Cluster 3')
-plt.scatter(x[y_kmeans == 3, 0], x[y_kmeans == 3, 1], s=100, c='cyan', label='Cluster 4')
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
-plt.title('K-Means Clustering')
-plt.xlabel('Principal Component 1')
-plt.ylabel('Principal Component 2')
-plt.legend()
-plt.grid(True)
-plt.show()
+    for cluster in range(clusters):
+        plt.scatter(x[y_kmeans == 0 + cluster, 0], x[y_kmeans == 0 + cluster, 1], s=100, color=plt.cm.tab10(cluster % 10), label='Cluster ' + str(cluster))
 
-# Training the K-Means model on 2 clusters
-kmeans = KMeans(n_clusters=2, init='k-means++', random_state=42)
-y_kmeans = kmeans.fit_predict(x)
-plt.scatter(x[y_kmeans == 0, 0], x[y_kmeans == 0, 1], s=100, c='red', label='Cluster 1')
-plt.scatter(x[y_kmeans == 1, 0], x[y_kmeans == 1, 1], s=100, c='blue', label='Cluster 2')
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
-plt.title('K-Means Clustering')
-plt.xlabel('Principal Component 1')
-plt.ylabel('Principal Component 2')
-plt.legend()
-plt.grid(True)
-plt.show()
+    plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=300, c='yellow', label='Centroids')
+    plt.title('K-Means Clustering')
+    plt.xlabel('Principal Component 1')
+    plt.ylabel('Principal Component 2')
+    plt.legend()
+    plt.grid(True)
+    return plt
+
+calculate_kmeans(4).show()
+calculate_kmeans(2).show()
 
 # DBSCAN
 dbscan = DBSCAN(eps=2, min_samples=5)

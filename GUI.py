@@ -1,5 +1,6 @@
 import streamlit as st
 from clustering_and_grouping import calculate_elbow_method
+from clustering_and_grouping import calculate_kmeans
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
@@ -28,9 +29,12 @@ def clustering_and_grouping_page():
         fig = calculate_elbow_method().gcf()
         elbow_placeholder.pyplot(fig)
 
-    st.slider(label="Cluster Count", min_value=0, max_value=20)
+    kmeans_slider = st.slider(label="Cluster Count", min_value=0, max_value=20)
+    kmeans_placeholder = st.empty()
 
-    st.button(label="K-Means Cluster", on_click=None)
+    if st.button(label="K-Means Cluster"):
+        fig = calculate_kmeans(kmeans_slider).gcf()
+        kmeans_placeholder.pyplot(fig)
 
     st.button(label="DBSCAN", on_click=None)
 
