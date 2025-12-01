@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="GUI defined">
+    <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="GUI redefined">
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,15 +185,7 @@
       <workItem from="1764260083879" duration="512000" />
       <workItem from="1764263783462" duration="395000" />
       <workItem from="1764264623685" duration="804000" />
-      <workItem from="1764581214391" duration="1390000" />
-    </task>
-    <task id="LOCAL-00056" summary="traditional models.py redefined">
-      <option name="closed" value="true" />
-      <created>1761662899532</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1761662899532</updated>
+      <workItem from="1764581214391" duration="1736000" />
     </task>
     <task id="LOCAL-00057" summary="utils redefined">
       <option name="closed" value="true" />
@@ -579,7 +571,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764582435191</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="GUI redefined">
+      <option name="closed" value="true" />
+      <created>1764582856986</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1764582856986</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2. feature engineering and EDA redefined" />
     <MESSAGE value="files renamed" />
     <MESSAGE value="Traditional Models.py redefined" />
     <MESSAGE value="feature engineering and EDA.py redefined" />
@@ -622,7 +621,8 @@
     <MESSAGE value="privacy preservation.py redefined" />
     <MESSAGE value="long short term memory.py defined" />
     <MESSAGE value="GUI defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI defined" />
+    <MESSAGE value="GUI redefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI redefined" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/4kitsw10_COM624_AE1$4__Machine_Learning_Models.coverage" NAME="4. Machine Learning Models Coverage Results" MODIFIED="1761229901658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
