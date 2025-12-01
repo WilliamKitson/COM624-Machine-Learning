@@ -34,7 +34,7 @@ def visualise_missing_rows(df):
     plt.ylabel("missing entries count")
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.show()
+    return plt
 
 def visualise_model(name, y_true_in, y_pred_in):
     y_true_oh = pd.get_dummies(y_true_in)

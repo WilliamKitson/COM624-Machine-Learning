@@ -6,8 +6,14 @@ import clustering_and_grouping
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
 def data_collection_page():
+    if "missing_data_before" not in st.session_state:
+        st.session_state.missing_data_before = None
+
     if "cleaned_dataset" not in st.session_state:
         st.session_state.cleaned_dataset = None
+
+    if "missing_data_after" not in st.session_state:
+        st.session_state.missing_data_after = None
 
     st.title("Data Collection and Pre-processing")
     st.markdown(
@@ -21,9 +27,16 @@ def data_collection_page():
     st.dataframe(df)
 
     if st.button(label="Clean"):
-        st.session_state.cleaned_dataset = data_collection_and_preprocessing.clean_dataset(df)
+        st.session_state.missing_data_before = utils.visualise_missing_rows(df).gcf()
+        st.pyplot(st.session_state.missing_data_before)
 
-    st.dataframe(st.session_state.cleaned_dataset)
+        df = data_collection_and_preprocessing.clean_dataset(df)
+
+        st.session_state.cleaned_dataset = df
+        st.dataframe(st.session_state.cleaned_dataset)
+
+        st.session_state.missing_data_after = utils.visualise_missing_rows(df).gcf()
+        st.pyplot(st.session_state.missing_data_after)
 
 def feature_engineering_page():
     st.title("Feature Engineering")

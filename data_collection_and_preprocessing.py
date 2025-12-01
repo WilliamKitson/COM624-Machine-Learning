@@ -4,7 +4,7 @@ import re
 
 # load dataset and visualise missing rows
 df = utils.load_dataset('CEAS_08.csv')
-utils.visualise_missing_rows(df)
+utils.visualise_missing_rows(df).show()
 
 def clean_dataset(df_in):
     # convert object type columns to more useful datatypes
@@ -55,4 +55,4 @@ df = clean_dataset(df)
 
 # Save cleaned data set
 utils.save_dataset(df, 'preprocessed_dataset.csv')
-utils.visualise_missing_rows(df)
+utils.visualise_missing_rows(df).show()
