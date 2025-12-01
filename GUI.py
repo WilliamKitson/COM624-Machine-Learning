@@ -24,24 +24,32 @@ def clustering_and_grouping_page():
         "The optimum cluster count for K-Means is calculated using the Elbow Method, although you can define the number of clusters you want manually using the slider."
     )
 
-    elbow_placeholder = st.empty()
+    if "elbow_fig" not in st.session_state:
+        st.session_state.elbow_fig = None
+    if "kmeans_fig" not in st.session_state:
+        st.session_state.kmeans_fig = None
+    if "dbscan_fig" not in st.session_state:
+        st.session_state.dbscan_fig = None
 
-    if st.button(label="Run Elbow Method"):
-        fig = calculate_elbow_method().gcf()
-        elbow_placeholder.pyplot(fig)
+    if st.button("Run Elbow Method"):
+        st.session_state.elbow_fig = calculate_elbow_method().gcf()
 
-    kmeans_slider = st.slider(label="Cluster Count", min_value=0, max_value=20)
-    kmeans_placeholder = st.empty()
+    if st.session_state.elbow_fig:
+        st.pyplot(st.session_state.elbow_fig)
 
-    if st.button(label="K-Means Cluster"):
-        fig = calculate_kmeans(kmeans_slider).gcf()
-        kmeans_placeholder.pyplot(fig)
+    kmeans_slider = st.slider("Cluster Count", 1, 20)
 
-    DBSCAN_placeholder = st.empty()
+    if st.button("K-Means Cluster"):
+        st.session_state.kmeans_fig = calculate_kmeans(kmeans_slider).gcf()
 
-    if st.button(label="DBSCAN", on_click=None):
-        fig = calculate_DBSCAN().gcf()
-        DBSCAN_placeholder.pyplot(fig)
+    if st.session_state.kmeans_fig:
+        st.pyplot(st.session_state.kmeans_fig)
+
+    if st.button("DBSCAN"):
+        st.session_state.dbscan_fig = calculate_DBSCAN().gcf()
+
+    if st.session_state.dbscan_fig:
+        st.pyplot(st.session_state.dbscan_fig)
 
 def privacy_preservation_page():
     st.title("Privacy Preservation")
