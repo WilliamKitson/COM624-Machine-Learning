@@ -7,6 +7,15 @@ st.markdown(
     "This is the GUI for my COM624 Machine Learning project."
 )
 
-st.text_input(label="Sender", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder="some.dude@someplace.com", disabled=False, label_visibility="visible", icon=None, width="stretch")
-st.text_input(label="Subject", value="", max_chars=None, key=None, type="default", help=None, autocomplete=None, on_change=None, args=None, kwargs=None, placeholder="Some Subject", disabled=False, label_visibility="visible", icon=None, width="stretch")
-st.text_area(label="Body", value="", height=None, max_chars=None, key=None, help=None, on_change=None, args=None, kwargs=None, placeholder="Some Body", disabled=False, label_visibility="visible", width="stretch")
+st.selectbox("Select Model", [
+    'Random Forest',
+    'Logistic Regression',
+    'Naive Bayes',
+    'XGBoost',
+    "LSTM",
+    "BERT"
+])
+st.text_input(label="Sender", placeholder="some.dude@someplace.com")
+st.text_input(label="Subject", placeholder="Some Subject")
+st.text_area(label="Body",placeholder="Some Body")
+st.button(label="Submit", key=None, help=None, on_click=None, args=None, kwargs=None, type="secondary", icon=None, disabled=False, use_container_width=None, width="content")
