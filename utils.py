@@ -19,6 +19,14 @@ def save_model(path, model):
     with open(os.path.join(models_dir, path + '.pkl'), 'wb') as f:
         pickle.dump(model, f)
 
+def load_model(path):
+    models_dir = 'models'
+
+    with open(os.path.join(models_dir, path + '.pkl'), 'rb') as f:
+        model = pickle.load(f)
+
+    return model
+
 def visualise_missing_rows(df):
     plt.figure(figsize=(10, 5))
     sns.barplot(x=df.isnull().sum().index, y=df.isnull().sum().values)

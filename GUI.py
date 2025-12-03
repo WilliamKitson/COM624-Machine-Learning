@@ -177,7 +177,7 @@ def prediction_page():
         "Please use the below tools to run a report on simulated emails."
     )
 
-    st.selectbox("Select Model", [
+    select_box = st.selectbox("Select Model", [
         'Random Forest',
         'Logistic Regression',
         'Naive Bayes',
@@ -210,7 +210,26 @@ def prediction_page():
         st.session_state.prediction_feature_engineered_dataset = df
         st.dataframe(st.session_state.prediction_feature_engineered_dataset)
 
+        st.subheader("Privacy Preserved Dataset")
+        df = privacy_preservation.differential_privacy(df, 20) #todo fix hard coded
+        st.session_state.prediction_privacy_preserved_dataset = df
+        st.dataframe(st.session_state.prediction_privacy_preserved_dataset)
 
+        model = None
+
+        if select_box == 'Random Forest':
+            model = utils.load_model('Random Forest')
+
+        prediction = 'Phishing'
+
+        if model is not None:
+            features = df.drop(columns=['label'])
+
+            if model.predict(features)[0] == 0:
+                prediction = 'Safe'
+
+            st.subheader("Prediction")
+            st.write(prediction)
 
 
 st.navigation([
