@@ -124,6 +124,12 @@ def privacy_preservation_page():
 
     st.title("Privacy Preservation")
 
+    st.markdown(
+        "This page performs privacy preservation to the feature engineered dataset using differential"
+        "privacy. You can set the differential privacy epsilon using the slider. To apply these changes"
+        "to the models during training, you must save the new privacy preserved dataset using the button."
+    )
+
     df = utils.load_dataset('feature_engineered_dataset.csv')
     st.dataframe(df)
 
