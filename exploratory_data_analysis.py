@@ -30,23 +30,26 @@ for figure in analyse_domains():
     figure.show()
 
 # boxplot body, subject, and link count by phishing and safe emails
-columns = {
-    'body length' : 'body_length',
-    'subject length' : 'subject_length',
-    'total words' : 'total_word_count',
-    'link count' : 'link_count',
-    'misspellings': 'misspellings',
-    'correct spellings': 'correct_spellings',
-    'correct spellings scaled': 'correct_spellings_scaled'
-}
-
-for name, column in columns.items():
+def boxplot_columns(column):
     df.boxplot(column=column, by='label')
-    plt.title(f'{name} by label')
+    plt.title(f'{column} by label')
     plt.suptitle('')
     plt.xlabel('label (0=safe, 1=phishing)')
-    plt.ylabel(name)
-    plt.show()
+    plt.ylabel(column)
+    return plt
+
+columns = {
+    'body_length',
+    'subject_length',
+    'total_word_count',
+    'link_count',
+    'misspellings',
+    'correct_spellings',
+    'correct_spellings_scaled'
+}
+
+for column in columns:
+    boxplot_columns(column).show()
 
 # line graph safe and phishing emails by hour
 email_types = {

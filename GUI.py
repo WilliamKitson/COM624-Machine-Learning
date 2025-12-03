@@ -5,6 +5,10 @@ import feature_engineering
 import exploratory_data_analysis
 import clustering_and_grouping
 
+#todo remove functionality from other files, they only contain functions
+#todo ensure that gui can control entire functionality including saving
+#todo
+
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
 def data_collection_page():
@@ -58,6 +62,27 @@ def exploratory_data_analysis_page():
     if st.button(label="Analyse domains"):
         for figure in exploratory_data_analysis.analyse_domains():
             st.pyplot(figure)
+
+    if st.button(label="Box Plot Body Length"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('body_length'))
+
+    if st.button(label="Box Plot Subject Length"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('subject_length'))
+
+    if st.button(label="Box Plot Total Word Count"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('total_word_count'))
+
+    if st.button(label="Box Plot Link Count"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('link_count'))
+
+    if st.button(label="Box Plot Misspellings"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('misspellings'))
+
+    if st.button(label="Box Plot Correct Spellings"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('correct_spellings'))
+
+    if st.button(label="Box Plot Correct Spellings Scaled"):
+        st.pyplot(exploratory_data_analysis.boxplot_columns('correct_spellings_scaled'))
 
 def clustering_and_grouping_page():
     st.title("Clustering and Grouping")
