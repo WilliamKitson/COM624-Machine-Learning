@@ -22,6 +22,7 @@ def data_collection_page():
         st.session_state.missing_data_after = None
 
     st.title("Data Collection and Pre-processing")
+
     st.markdown(
         "This page performs pre-processing on my dataset (CEAS_08). The cleaning process includes "
         "converting columns into more useful types, dropping columns not useful for analysis, "
@@ -44,6 +45,12 @@ def data_collection_page():
 def feature_engineering_page():
     st.title("Feature Engineering")
 
+    st.markdown(
+        "This page performs feature engineering, the process of extracting new features from the cleaned "
+        "dataset. Please run feature engineering and compare the cleaned dataset to the produced feature "
+        "engineered dataset"
+    )
+
     if "feature_engineered_dataset" not in st.session_state:
         st.session_state.feature_engineered_dataset = None
 
@@ -56,6 +63,11 @@ def feature_engineering_page():
 
 def exploratory_data_analysis_page():
     st.title("Exploratory Data Analysis")
+
+    st.markdown(
+        "This page performs Exploratory Data Analysis, please click on the buttons below to visualise "
+        "the corresponding EDA insights."
+    )
 
     if st.button(label="Analyse domains"):
         for figure in exploratory_data_analysis.analyse_domains():
@@ -84,6 +96,7 @@ def exploratory_data_analysis_page():
 
 def clustering_and_grouping_page():
     st.title("Clustering and Grouping")
+
     st.markdown(
         "This page performs clustering and grouping using K-Means clustering and DBSCAN. "
         "The optimum cluster count for K-Means is calculated using the Elbow Method, although you can define the number of clusters you want manually using the slider."
@@ -125,8 +138,8 @@ def privacy_preservation_page():
     st.title("Privacy Preservation")
 
     st.markdown(
-        "This page performs privacy preservation to the feature engineered dataset using differential"
-        "privacy. You can set the differential privacy epsilon using the slider. To apply these changes"
+        "This page performs privacy preservation to the feature engineered dataset using differential "
+        "privacy. You can set the differential privacy epsilon using the slider. To apply these changes "
         "to the models during training, you must save the new privacy preserved dataset using the button."
     )
 
