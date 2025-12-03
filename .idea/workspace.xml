@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="GUI redefined">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Random Forest.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Random Forest.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,14 +195,6 @@
       <workItem from="1764606241230" duration="1074000" />
       <workItem from="1764758517689" duration="2101000" />
       <workItem from="1764761873443" duration="4293000" />
-    </task>
-    <task id="LOCAL-00073" summary="feature engineering.py redefined">
-      <option name="closed" value="true" />
-      <created>1762165166495</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1762165166495</updated>
     </task>
     <task id="LOCAL-00074" summary="gitignore redefined">
       <option name="closed" value="true" />
@@ -591,7 +580,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764772064782</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="GUI redefined">
+      <option name="closed" value="true" />
+      <created>1764773262371</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1764773262371</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

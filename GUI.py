@@ -220,6 +220,15 @@ def prediction_page():
         if select_box == 'Random Forest':
             model = utils.load_model('Random Forest')
 
+        if select_box == 'Logistic Regression':
+            model = utils.load_model('Logistic Regression')
+
+        if select_box == 'Naive Bayes':
+            model = utils.load_model('Naive Bayes')
+
+        if select_box == 'XGBoost':
+            model = utils.load_model('XGBoost')
+
         prediction = 'Phishing'
 
         if model is not None:
@@ -230,7 +239,6 @@ def prediction_page():
 
             st.subheader("Prediction")
             st.write(prediction)
-
 
 st.navigation([
     st.Page(data_collection_page, title="Data Collection and Pre-processing"),
