@@ -1,10 +1,13 @@
 import streamlit as st
+from sklearn.ensemble import RandomForestClassifier
+
 import utils
 import data_collection_and_preprocessing
 import feature_engineering
 import exploratory_data_analysis
 import clustering_and_grouping
 import privacy_preservation
+import traditional_models
 
 #todo remove functionality from other files, they only contain functions
 #todo ensure that gui can control entire functionality including saving
@@ -162,9 +165,9 @@ def privacy_preservation_page():
 def training_page():
     st.title("Traditional Models, LSTM, and BERT")
 
-
-
-    st.button(label="Train", on_click=None)
+    if st.button("Train Random Forest"):
+        output = traditional_models.train_model(RandomForestClassifier(), 'Random Forest')
+        st.pyplot(output['visualisation'])
 
 def prediction_page():
     st.title("Prediction")
