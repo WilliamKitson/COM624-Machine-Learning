@@ -161,6 +161,9 @@ def privacy_preservation_page():
 
 def training_page():
     st.title("Traditional Models, LSTM, and BERT")
+
+
+
     st.button(label="Train", on_click=None)
 
 def prediction_page():

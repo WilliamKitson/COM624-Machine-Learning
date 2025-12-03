@@ -69,20 +69,3 @@ def model_performance(y_true_in, y_pred_in):
     }
 
     return float(sum(metrics_results) / len(metrics_results))
-
-def visualise_model_performance(model_performances):
-    model_performances = sorted(model_performances.items(), key=lambda x: x[1], reverse=True)
-
-    sns.barplot(
-        x=[m[0] for m in model_performances],
-        y=[m[1] for m in model_performances]
-    )
-
-    plt.grid(axis='y', linestyle='--', alpha=0.7)
-    plt.title('')
-    plt.ylabel("Score")
-    plt.ylim(0, 1)
-    plt.xticks(rotation=45)
-    plt.yticks(np.arange(0, 1.1, 0.1))
-    plt.tight_layout()
-    plt.show()
