@@ -4,10 +4,10 @@ import data_collection_and_preprocessing
 import feature_engineering
 import exploratory_data_analysis
 import clustering_and_grouping
+import privacy_preservation
 
 #todo remove functionality from other files, they only contain functions
 #todo ensure that gui can control entire functionality including saving
-#todo
 
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
@@ -53,8 +53,6 @@ def feature_engineering_page():
     if st.button(label="Engineer"):
         st.session_state.feature_engineered_dataset = feature_engineering.engineer_features(df)
         st.dataframe(st.session_state.feature_engineered_dataset)
-
-    #todo finish EDA
 
 def exploratory_data_analysis_page():
     st.title("Exploratory Data Analysis")
@@ -121,10 +119,26 @@ def clustering_and_grouping_page():
         st.pyplot(st.session_state.dbscan_fig)
 
 def privacy_preservation_page():
+    if "privacy_preserved_dataset" not in st.session_state:
+        st.session_state.privacy_preserved_dataset = None
+
     st.title("Privacy Preservation")
 
+    df = utils.load_dataset('feature_engineered_dataset.csv')
+    st.dataframe(df)
+
     differential_privacy_epsilon_slider = st.slider("Differential Privacy Epsilon", 0, 100)
-    st.button(label="Privatise", on_click=None)
+
+    if st.button("Apply Differential Privacy"):
+        st.session_state.privacy_preserved_dataset = privacy_preservation.differential_privacy(
+            df,
+            differential_privacy_epsilon_slider
+        )
+
+    st.dataframe(st.session_state.privacy_preserved_dataset)
+
+    if st.button("Save Privacy Preserved Dataset"):
+        utils.save_dataset(st.session_state.privacy_preserved_dataset, 'privacy_preserved_dataset.csv')
 
 def training_page():
     st.title("Traditional Models, LSTM, and BERT")
