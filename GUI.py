@@ -10,9 +10,6 @@ import privacy_preservation
 import traditional_models
 from datetime import datetime
 
-#todo remove functionality from other files, they only contain functions
-#todo ensure that gui can control entire functionality including saving
-
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
 def data_collection_page():
@@ -158,6 +155,9 @@ def privacy_preservation_page():
             differential_privacy_epsilon_slider
         )
 
+    if st.button("Dont Apply Differential Privacy"):
+        st.session_state.privacy_preserved_dataset = privacy_preservation.no_differential_privacy(df)
+
     st.dataframe(st.session_state.privacy_preserved_dataset)
 
     if st.button("Save Privacy Preserved Dataset"):
@@ -211,7 +211,7 @@ def prediction_page():
         st.dataframe(st.session_state.prediction_feature_engineered_dataset)
 
         st.subheader("Privacy Preserved Dataset")
-        df = privacy_preservation.differential_privacy(df, 20) #todo fix hard coded
+        df = privacy_preservation.differential_privacy(df, 1)
         st.session_state.prediction_privacy_preserved_dataset = df
         st.dataframe(st.session_state.prediction_privacy_preserved_dataset)
 
