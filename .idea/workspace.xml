@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Random Forest.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/Random Forest.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traditional models.py" beforeDir="false" afterPath="$PROJECT_DIR$/traditional_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,51 +47,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.1. data collection and preprocessing.executor": "Run",
-    "Python.2. feature engineering and EDA.executor": "Run",
-    "Python.4. Machine Learning Models.executor": "Run",
-    "Python.4.1. Traditional Models.executor": "Run",
-    "Python.4.2. LSTM.executor": "Run",
-    "Python.GUI.executor": "Run",
-    "Python.LSTM model.executor": "Run",
-    "Python.Traditional Models.executor": "Run",
-    "Python.clustering and grouping.executor": "Run",
-    "Python.clustering_and_grouping.executor": "Run",
-    "Python.data collection and preprocessing.executor": "Run",
-    "Python.data_cleaning.executor": "Run",
-    "Python.data_collection_and_preprocessing.executor": "Run",
-    "Python.deep learning.executor": "Run",
-    "Python.differential privacy.executor": "Run",
-    "Python.exploratory data analysis.executor": "Run",
-    "Python.exploratory_data_analysis.executor": "Run",
-    "Python.feature engineering and EDA.executor": "Run",
-    "Python.feature engineering.executor": "Run",
-    "Python.learning pca.executor": "Run",
-    "Python.long short term memory.executor": "Run",
-    "Python.pca temp.executor": "Run",
-    "Python.principal component analysis.executor": "Run",
-    "Python.privacy preservation.executor": "Run",
-    "Python.privacy preserving techniques.executor": "Run",
-    "Python.traditional models.executor": "Run",
-    "Python.traditional_models.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/williamkitson/PyCharmProjects/4kitsw10 COM624 AE1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.1. data collection and preprocessing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.2. feature engineering and EDA.executor&quot;: &quot;Run&quot;,
+    &quot;Python.4. Machine Learning Models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.4.1. Traditional Models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.4.2. LSTM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Python.LSTM model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Traditional Models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clustering and grouping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clustering_and_grouping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data collection and preprocessing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_cleaning.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_collection_and_preprocessing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.deep learning.executor&quot;: &quot;Run&quot;,
+    &quot;Python.differential privacy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exploratory data analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.exploratory_data_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature engineering and EDA.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature engineering.executor&quot;: &quot;Run&quot;,
+    &quot;Python.learning pca.executor&quot;: &quot;Run&quot;,
+    &quot;Python.long short term memory.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pca temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.principal component analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.privacy preservation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.privacy preserving techniques.executor&quot;: &quot;Run&quot;,
+    &quot;Python.traditional models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.traditional_models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/williamkitson/PyCharmProjects/4kitsw10 COM624 AE1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />

@@ -1,6 +1,6 @@
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
-
+import pandas as pd
 import utils
 import data_collection_and_preprocessing
 import feature_engineering
@@ -8,6 +8,7 @@ import exploratory_data_analysis
 import clustering_and_grouping
 import privacy_preservation
 import traditional_models
+from datetime import datetime
 
 #todo remove functionality from other files, they only contain functions
 #todo ensure that gui can control entire functionality including saving
@@ -184,11 +185,33 @@ def prediction_page():
         "LSTM",
         "BERT"
     ])
-    st.text_input(label="Sender", placeholder="some.dude@someplace.com")
-    st.time_input(label="Time")
-    st.text_input(label="Subject", placeholder="Some Subject")
-    st.text_area(label="Body", placeholder="Some Body")
-    st.button(label="Predict", on_click=None)
+
+    sender = st.text_input(label="Sender", placeholder="some.dude@someplace.com")
+    receiver = st.text_input(label="receiver", placeholder="another.dude@someplace.com")
+    date = st.date_input(label="Date")
+    time = st.time_input(label="Time")
+    subject = st.text_input(label="Subject", placeholder="Some Subject")
+    body = st.text_area(label="Body", placeholder="Some Body")
+
+    if st.button(label="Predict"):
+        datetime_combined = datetime.combine(date, time)
+
+        df = pd.DataFrame({
+            'sender': [sender],
+            'receiver': [receiver],
+            'date': [datetime_combined],
+            'subject': [subject],
+            'body': [body],
+            'label': [-1]
+        })
+
+        st.subheader("Feature Engineered Dataset")
+        df = feature_engineering.engineer_features(df)
+        st.session_state.prediction_feature_engineered_dataset = df
+        st.dataframe(st.session_state.prediction_feature_engineered_dataset)
+
+
+
 
 st.navigation([
     st.Page(data_collection_page, title="Data Collection and Pre-processing"),
