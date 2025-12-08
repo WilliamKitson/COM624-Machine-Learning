@@ -1,6 +1,10 @@
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from xgboost import XGBClassifier
+
 import utils
 import data_collection_and_preprocessing
 import feature_engineering
@@ -168,6 +172,18 @@ def training_page():
 
     if st.button("Train Random Forest"):
         output = traditional_models.train_model(RandomForestClassifier(), 'Random Forest')
+        st.pyplot(output['visualisation'])
+
+    if st.button("Train Logistic Regression"):
+        output = traditional_models.train_model(LogisticRegression(), 'Logistic Regression')
+        st.pyplot(output['visualisation'])
+
+    if st.button("Train Naive Bayes"):
+        output = traditional_models.train_model(GaussianNB(), 'Naive Bayes')
+        st.pyplot(output['visualisation'])
+
+    if st.button("Train XGBoost"):
+        output = traditional_models.train_model(XGBClassifier(), 'XGBoost')
         st.pyplot(output['visualisation'])
 
 def prediction_page():
