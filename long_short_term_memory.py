@@ -41,7 +41,7 @@ class LSTM(nn.Module):
         out = self.fc(out[:, -1, :])  # last timestep
         return out
 
-# initialise LSTM
+# initialize LSTM
 model = LSTM(input_size=features.shape[1]).to(device)
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
