@@ -35,3 +35,5 @@ def no_differential_privacy(df):
     df.drop('label', axis=1)
     df_numeric = pd.concat([df_numeric, label], axis=1)
     return df_numeric
+
+utils.save_dataset(differential_privacy(df, 20), 'privacy_preserved_dataset.csv')

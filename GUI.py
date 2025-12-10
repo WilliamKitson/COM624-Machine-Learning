@@ -4,7 +4,6 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from xgboost import XGBClassifier
-
 import utils
 import data_collection_and_preprocessing
 import feature_engineering
