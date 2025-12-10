@@ -13,6 +13,9 @@ import privacy_preservation
 import traditional_models
 from datetime import datetime
 
+# Please find and download the CEAS_08 dataset at: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset
+# This dataset MUST be pasted into the datasets directory
+
 st.set_page_config(page_title="4kitsw10 COM624 AE1", layout="wide")
 
 def data_collection_page():

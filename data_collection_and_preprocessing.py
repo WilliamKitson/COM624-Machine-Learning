@@ -2,6 +2,9 @@ import utils
 import pandas as pd
 import re
 
+# Please find and download the CEAS_08 dataset at: https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset
+# This dataset MUST be pasted into the datasets directory
+
 # load dataset and visualise missing rows
 df = utils.load_dataset('CEAS_08.csv')
 utils.visualise_missing_rows(df).show()

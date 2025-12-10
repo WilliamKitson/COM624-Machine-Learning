@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a647cf15-a55d-44c2-901f-9cfe74d847a2" name="Changes" comment="long_short_term_memory.py redefined">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/feature_engineered_dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/preprocessed_dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/privacy_preserved_dataset.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/LSTM.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Logistic Regression.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Naive Bayes.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Random Forest.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/XGBoost.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacy_preservation.py" beforeDir="false" afterPath="$PROJECT_DIR$/privacy_preservation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,6 +207,8 @@
       <workItem from="1765274032568" duration="192000" />
       <workItem from="1765365437691" duration="6000" />
       <workItem from="1765366276730" duration="359000" />
+      <workItem from="1765368527964" duration="29000" />
+      <workItem from="1765369357161" duration="310000" />
     </task>
     <task id="LOCAL-00077" summary="learning pca.py defined">
       <option name="closed" value="true" />
