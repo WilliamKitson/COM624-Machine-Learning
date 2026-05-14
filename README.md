@@ -2,8 +2,6 @@
 
 This project is a COM624 machine learning coursework implementation for phishing email detection using the CEAS_08 email dataset. It builds a full workflow from raw email data through preprocessing, feature engineering, exploratory analysis, clustering, privacy preservation, model training, and a Streamlit prediction interface.
 
-The project uses the report file `4kitsw10 COM624 report.pdf` as the written companion to the implementation.
-
 ## Project Overview
 
 The system classifies emails as either safe or phishing. It starts with the CEAS_08 dataset, cleans and anonymises sensitive fields, engineers numeric features from the email metadata and content, applies optional differential privacy, and trains traditional machine learning models.
